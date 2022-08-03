@@ -18,14 +18,25 @@ header {
     padding-left: 10px;
     padding-right: 10px;
 }
+footer {
+    background-color: aliceblue;
+    height: 50px;
+    text-align: center;
+}
 main {
     height: 100%;
     width: 100%;
     flex-grow: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    justify-content: center;
 }
 section {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    margin-top: 20px;
 }
 .hero {
     position: relative;
@@ -74,4 +85,28 @@ p {
 }
 .content > div {
     max-width: fit-content;
+}
+
+.proj {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    max-width: 20vw;
+    font-size: 0.6em;
+    align-self: center;
+}
+.card img {
+    width: 100%;
+}
+
+
+/* Scroll Dots */
+
+.dots li a::before {
+    background: rgba(22,22,22,.48);
+}
+.dots li a.active::before {
+    background: rgba(200,3,3,.48);
 }
