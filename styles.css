@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans&family=Roboto&family=Roboto+Slab:wght@300;500&display=swap');
+
 :root {
     --neutral: #e7e5df;
     --accent: #832161;
@@ -13,6 +15,13 @@ body {
 }
 body {
     background-color: var(--neutral);
+    font-family: 'Montserrat', sans-serif;
+
+    /* font-family: 'Open Sans', sans-serif; */
+
+    /* font-family: 'Roboto', sans-serif; */
+
+    /* font-family: 'Roboto Slab', serif; */
 }
 
 /* Content Overall */
@@ -85,7 +94,7 @@ section {
 }
 .card {
     /* prevent img too large */
-    max-width: 20vw;
+    max-width: 50vw;
 }
 .card img {
     /* fill card */
