@@ -2,6 +2,11 @@ html,
 body {
     margin: 0;
 }
+
+body {
+    background-color: #e7e5df;
+    z-index: 0;
+}
 header {
     position: sticky;
     top: 0;
@@ -19,9 +24,15 @@ header {
     padding-right: 10px;
 }
 footer {
-    background-color: aliceblue;
+    background-color:#832161;
     height: 50px;
     text-align: center;
+    z-index: 998;
+    position: relative;
+}
+
+button {
+    color: #832161
 }
 main {
     height: 100%;
@@ -32,17 +43,21 @@ main {
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-content: center;
+
+
+    
 }
 section {
     height: 100vh;
     width: 100vw;
-    margin-top: 20px;
+    background-color: #e7e5df;
 }
 .hero {
     position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
+    background: none;
 }
 h1 {
     font-size: 5em;
@@ -67,14 +82,38 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(76deg, purple, blue);
+    background: linear-gradient(76deg, #3C104B, #574CA9);
 
 
     transform: skewY(-7deg) translateY(-15vh);
     
     /* header above */
     z-index: -1;
+
+    box-shadow: 0px 0px 20px rgb(66, 66, 66);
 }
+
+
+.cont-bg {
+    height: 115vh;
+    /* background: linear-gradient(76deg, #3C104B, #574CA9); */
+
+
+    transform: skewY(-7deg) translateY(0vh);
+    
+    /* header above */
+    z-index: 1;
+
+    /* box-shadow: 0px 0px 20px rgb(66, 66, 66); */
+}
+.contact {
+    background: linear-gradient(76deg, #3C104B, #574CA9);
+    position: relative;
+    /* top: -115vh; */
+    z-index: 998;
+}
+
+
 .content {
     max-width: 70em;
     margin: 0 auto;
@@ -102,11 +141,13 @@ p {
 }
 
 
+
+
 /* Scroll Dots */
 
 .dots li a::before {
-    background: rgba(22,22,22,.48);
+    background: #CAC4CE;
 }
 .dots li a.active::before {
-    background: rgba(200,3,3,.48);
+    background: #832161;
 }
