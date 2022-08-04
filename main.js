@@ -1,7 +1,7 @@
 new fullScroll({
     mainElement: "main",
     displayDots: true,
-    dotsPosition: "right",
+    dotsPosition: "left",
     animateTime: 0.7,
     animateFunction: "ease",
 
