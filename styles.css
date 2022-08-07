@@ -34,9 +34,11 @@ main {
     ". bio      proj2 ."
     ". contact  proj3 ."
     ". .        proj3 ."
-    ". .        more  .";
+    ". .        more  ."
+    ". . . .";
     gap: 2em;
     height: 100%;
+    align-items: center;
 }
 .project1 {
     grid-area: proj1;
@@ -49,6 +51,7 @@ main {
 }
 .github-more {
     grid-area: more;
+    align-self: start;
 }
 .head-name {
     grid-area: head;
@@ -140,13 +143,14 @@ button:hover {
         grid-template-areas:
         "."
         "head"
-        "socials"
         "bio"
+        "socials"
         "proj1"
         "proj2"
         "proj3"
         "more"
-        "contact";
+        "contact"
+        ".";
     }
     .card {
         flex-direction: column;
@@ -155,5 +159,8 @@ button:hover {
     .proj {
         display: flex;
         justify-content: center;
+    }
+    img {
+        max-width: 100%;
     }
 }
