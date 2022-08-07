@@ -10,28 +10,65 @@
 html,
 body {
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 body {
     background-color: var(--neutral);
     font-family: 'Montserrat', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    /* grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(7, 1fr); */
+    grid-template-areas: 
+    ". . . ."
+    ". .        proj1 ."
+    ". head     proj1 ."
+    ". socials  proj2 ."
+    ". bio      proj2 ."
+    ". contact  proj3 ."
+    ". .        proj3 ."
+    ". .        more  .";
+    gap: 2em;
+    height: 100%;
 }
 .project1 {
-    grid-area: 1/3/3/4;
+    grid-area: proj1;
 }
 .project2 {
-    grid-area: 3/3/5/4;
+    grid-area: proj2;
 }
 .project3 {
-    grid-area: 5/3/7/4;
+    grid-area: proj3;
 }
-.left-side {
-    grid-area: 1/2/7/3;
+.github-more {
+    grid-area: more;
 }
+.head-name {
+    grid-area: head;
+}
+.bio {
+    grid-area: bio;
+}
+.socials {
+    grid-area: socials;
+    text-align: center;
+}
+.contact {
+    grid-area: contact;
+}
+
+
+
+
+
+
 
 h1 {
     margin: 0;
@@ -40,8 +77,13 @@ h1 {
 img {
     max-width: 400px;
 }
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
 .card {
     display: flex;
+    gap: 2em;
 }
 .proj-side {
     max-width: 300px;
@@ -55,6 +97,9 @@ img {
 }
 .contact-form {
     display: none;
+}
+.contact-open {
+    width: 100%;
 }
 .show {
     display: block;
@@ -78,4 +123,37 @@ button {
 button:hover {
     color: var(--accent);
     background-color: white;
+}
+
+
+/* RESPONSIVE */
+
+@media (min-width: 1400px) {
+    main {
+        width: 1400px;
+        
+    }
+}
+
+@media (max-width: 1400px) {
+    main {
+        grid-template-areas:
+        "."
+        "head"
+        "socials"
+        "bio"
+        "proj1"
+        "proj2"
+        "proj3"
+        "more"
+        "contact";
+    }
+    .card {
+        flex-direction: column;
+        width: fit-content;
+    }
+    .proj {
+        display: flex;
+        justify-content: center;
+    }
 }
