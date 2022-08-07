@@ -28,43 +28,43 @@ main {
     grid-template-rows: repeat(7, 1fr); */
     grid-template-areas: 
     ". . . ."
-    ". .        proj1 ."
-    ". head     proj1 ."
-    ". socials  proj2 ."
-    ". bio      proj2 ."
-    ". contact  proj3 ."
-    ". .        proj3 ."
-    ". .        more  ."
+    ". .  p1 ."
+    ". hd p1 ."
+    ". so p2 ."
+    ". bi p2 ."
+    ". ct p3 ."
+    ". .  p3 ."
+    ". .  gh ."
     ". . . .";
     gap: 2em;
     height: 100%;
     align-items: center;
 }
 .project1 {
-    grid-area: proj1;
+    grid-area: p1;
 }
 .project2 {
-    grid-area: proj2;
+    grid-area: p2;
 }
 .project3 {
-    grid-area: proj3;
+    grid-area: p3;
 }
 .github-more {
-    grid-area: more;
+    grid-area: gh;
     align-self: start;
 }
 .head-name {
-    grid-area: head;
+    grid-area: hd;
 }
 .bio {
-    grid-area: bio;
+    grid-area: bi;
 }
 .socials {
-    grid-area: socials;
+    grid-area: so;
     text-align: center;
 }
 .contact {
-    grid-area: contact;
+    grid-area: ct;
 }
 
 
@@ -142,14 +142,14 @@ button:hover {
     main {
         grid-template-areas:
         "."
-        "head"
-        "bio"
-        "socials"
-        "proj1"
-        "proj2"
-        "proj3"
-        "more"
-        "contact"
+        "hd"
+        "bi"
+        "so"
+        "p1"
+        "p2"
+        "p3"
+        "gh"
+        "ct"
         ".";
     }
     .card {
