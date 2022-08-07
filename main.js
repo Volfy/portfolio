@@ -1,8 +1,4 @@
-new fullScroll({
-    mainElement: "main",
-    displayDots: true,
-    dotsPosition: "left",
-    animateTime: 0.7,
-    animateFunction: "ease",
+const open = document.querySelector(".contact-open");
+const form = document.querySelector(".contact-form").classList;
 
-})
+open.addEventListener('click', () => form.toggle("show"));

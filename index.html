@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!---REF: https://github.com/amendoa/fullPageScrollPureJS -->
-    <link rel="stylesheet" type="text/css" href="full-page-scroll.min.css"/>
-    <script src="full-page-scroll.min.js"></script>
-
-
     <link rel="icon" type="image/svg" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
@@ -19,54 +14,90 @@
 <body>
     
     <main id="main">
-        <section id="hero" class="hero">
-            <div class="content">
-                <div>
-                    <h1>Hi, I'm André Sammut</h1>
-                    <p class="tagline">(I also go by Sasha sometimes)</p>
-                </div>
-                <p>I'm a Music Production Graduate and I've been learning web development. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores labore dolorem placeat rerum veniam eius tenetur consequatur aliquid dolorum amet laudantium, quo maxime, porro delectus rem? A, tempore dolorum! bla bla blac</p>
-                <div><button>RESUME </button><button>EMAIL</button> </div>
+        <section id="hero" class="left-side"> 
+            
+            <div>
+                <h1>Hi, I'm André Sammut</h1>
+                <p class="tagline">(I also go by Sasha sometimes)</p>
             </div>
+            
+            <p>I'm a Music Production Graduate and I've been learning web development. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores labore dolorem placeat rerum veniam eius tenetur consequatur aliquid dolorum amet laudantium, quo maxime, porro delectus rem? A, tempore dolorum! bla bla blac</p>
+            
+            <div><button>RESUME </button><button>Linkedin </button><button>Github </button><button>EMAIL</button> </div>
+            
+            
+            <div class="contact-section"> 
+                <button class="contact-open">VV Contact</button>
+                <div class="contact-form">
+                    <form action="" method="get">
+                        <label for="">Name</label>
+                        <input type="text">
+                        <label for="">email</label>
+                        <input type="text">
+                        <label for="">Subject</label>
+                        <input type="text">
+                        <label for="">Submit</label>
+                        <input type="text">
+                    </form>
+                </div>
+            </div>        
+        
         </section>
 
-        <section class="project1 proj">
+        <section class="project1">
             <div class="card">
-                <h1>Project 1</h1>
-                <img src="vids/sign-up-form.gif" alt="">
-                <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
-                <div class="buttons"><button>Live</button><button>Github</button></div>
-            </div>
-        </section>
-        <section class="project2 proj">
-            <div class="card">
-                <h1>Project 2</h1>
-                <img src="placeholder.png" alt="Project 1">
-                <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
-                <div class="buttons"><button>Live</button><button>Github</button></div>
-            </div>
-        </section>
-        <section class="project3 proj">
-            <div class="card">
-                <h1>Project 3</h1>
-                <img src="placeholder.png" alt="Project 1">
-                <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
-                <div class="buttons"><button>Live</button><button>Github</button></div>
-            </div>
-        </section>
-        <section class="contact">
-            
-                Github linkedin Email >?
                 
-                Contact form
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br>
-                <footer>Made by me.</footer>
+                <img src="gifs/sign-up-form.gif" alt="">
+                <div class="proj-side">
+                    <h1>Project 1</h1>
+                    <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
+                    <div class="buttons">
+                        <form action="github.com/Volfy/">
+                            <button type="submit">Code</button>
+                        </form>
+                        <form action="volfy.github.io/">
+                            <button type="submit">Live</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
-        
+        <section class="project2">
+            <div class="card">
+                
+                <img src="gifs/library.gif" alt="Project 1">
+                <div class="proj-side">
+                    <h1>Project 2</h1>
+                    <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
+                    <div class="buttons">
+                        <form action="github.com/Volfy/">
+                            <button type="submit">Code</button>
+                        </form>
+                        <form action="volfy.github.io/">
+                            <button type="submit">Live</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project3">
+            <div class="card">
+                
+                <img src="gifs/restaurant.gif" alt="Project 1">
+                <div class="proj-side"> 
+                    <h1>Project 3</h1>
+                    <p>This is a simple interactive xyz made using bla bla bla. I aimed to learn xyz bla blac. blac bla bla bla</p>
+                    <div class="buttons">
+                        <form action="github.com/Volfy/">
+                            <button type="submit">Code</button>
+                        </form>
+                        <form action="volfy.github.io/">
+                            <button type="submit">Live</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
 
