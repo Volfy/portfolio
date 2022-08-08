@@ -31,7 +31,6 @@ main {
     grid-template-rows: repeat(9, 1fr); 
     gap: 1em;
     height: 100%;
-    /* align-items: center; */
 
     animation: fadein 2.24s;
     animation-timing-function: ease-in;
@@ -42,8 +41,8 @@ main {
     
 }
 .right {
-    grid-column: 8/18;
-    grid-row: 2/10;
+    grid-column: 8/19;
+    grid-row: 2/11;
 }
 
 
@@ -61,7 +60,7 @@ h1 {
     font-style: italic;
 }
 img {
-    max-width: 400px;
+    max-width: 450px;
 }
 a {
     border: 1px solid black;
@@ -133,7 +132,6 @@ a:hover {
     grid-row: -3/-2;
     font-size: 4em;
     width: 100%;
-
 }
 .fzbz div {
     display: inline-block;
@@ -248,7 +246,7 @@ a:hover {
     main {
         display: flex;
         flex-direction: column;
-        margin: 1.5em;
+        margin: 1em;
     }
     .card {
         flex-direction: column;
