@@ -23,6 +23,7 @@ body {
     align-items: center;
 }
 main {
+    margin: 1.5em;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(8, 1fr); 
@@ -63,9 +64,8 @@ a {
     color: var(--accent);
 }
 a:hover {
-    background-color: white;
-    color: var(--main-dark);
-    border: 1px solid white;
+    animation: towhite 0.5s forwards;
+    
 }
 
 
@@ -80,11 +80,13 @@ a:hover {
 .card > a {
     border: none;
     color: none;
+    animation: none;
 }
 .card > a:hover {
     border: none;
     color: none;
     background: none;
+    animation: none;
 }
 .proj p {
     margin: 0;
@@ -105,6 +107,8 @@ a:hover {
     grid-column: 1/-1;
     grid-row: -3/-2;
     font-size: 4em;
+    width: 100%;
+
 }
 .fzbz div {
     display: inline-block;
@@ -140,6 +144,15 @@ a:hover {
     from {opacity: 0%;}
     to {opacity: 100%;}
 }
+@keyframes towhite {
+    from {background-color: var(--main-dark);
+        color: white;
+        border: 1px solid var(--main-dark);
+        }
+    to {background-color: white;
+    color: var(--main-dark);
+    border: 1px solid white;}
+}
 @keyframes num {
     from {color: blue;}
     to {color: black;}
@@ -171,6 +184,7 @@ a:hover {
     main {
         display: flex;
         flex-direction: column;
+        
     }
 
     .proj {
@@ -185,11 +199,16 @@ a:hover {
     img {
         max-width: 100%;
     }
+
+    h1 {
+        margin-top: 1em;
+    }
 }
 @media (max-width: 800px) {
     main {
         display: flex;
         flex-direction: column;
+        margin: 1.5em;
     }
     .card {
         flex-direction: column;
@@ -206,5 +225,16 @@ a:hover {
     }
     img {
         max-width: 100%;
+    }
+    h1 {
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+
+    .fzbz {
+        text-align: center;
+    }
+    .fzbz div {
+        display: block;
     }
 }
