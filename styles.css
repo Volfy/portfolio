@@ -207,6 +207,12 @@ a:hover {
     .left {
         margin-top: 2em;
     }
+    .wpos-small {
+        display: none;
+    }
+    .wpos-large {
+        display: inline;
+    }
 }
 @media (max-width: 1400px) {
     main {
@@ -230,6 +236,12 @@ a:hover {
 
     h1 {
         margin-top: 1em;
+    }
+    .wpos-small {
+        display: inline;
+    }
+    .wpos-large {
+        display: none;
     }
 }
 @media (max-width: 800px) {
@@ -257,6 +269,12 @@ a:hover {
     h1 {
         margin-top: 1em;
         font-size: 1.2em;
+    }
+    .wpos-small {
+        display: inline;
+    }
+    .wpos-large {
+        display: none;
     }
 
     .fzbz {
