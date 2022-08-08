@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat:wght@300;500');
 
 :root {
     --neutral: #e7e5df;
@@ -23,6 +23,8 @@ body {
     align-items: center;
 
     font-size: 1.25em;
+    font-weight: 200;
+    color: var(--main-dark);
 }
 main {
     margin: 1.5em;
@@ -36,13 +38,14 @@ main {
     animation-timing-function: ease-in;
 }
 .left {
-    grid-column: 1/7;
+    grid-column: 1/8;
     grid-row: 2/8;
     
 }
 .right {
     grid-column: 8/19;
     grid-row: 2/11;
+    margin-left: 3em;
 }
 
 
@@ -51,13 +54,19 @@ main {
 /* GENERAL */
 h1 {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 2em;
+    /* text-transform: uppercase; */
+    font-family: 'Fraunces', serif;
+    /* font-style: italic; */
+    color: var(--main-dark);
+    text-shadow: 2px 2px var(--neutaccent);
 }
 .diff-line {
     display: block;
 }
 .sasha {
-    font-style: italic;
+    font-weight: 400;
+    /* font-style: italic; */
 }
 img {
     max-width: 450px;
@@ -66,7 +75,7 @@ a {
     border: 1px solid black;
     border-radius: 2px;
     text-decoration: none;
-    color: var(--accent);
+    color: var(--main-light);
 }
 a:hover {
     animation: towhite 0.5s forwards;
@@ -97,7 +106,7 @@ a:hover {
 .card {
     display: flex;
     gap: 2em;
-    font-size: 0.75em;
+    font-size: 0.86em;
 }
 /* Remove a styling from imgs in cards */
 .card > a {
@@ -131,7 +140,9 @@ a:hover {
     grid-column: 1/-1;
     grid-row: -3/-2;
     font-size: 4em;
-    width: 100%;
+    /* width: 100%; */
+    font-weight: 600;
+    
 }
 .fzbz div {
     display: inline-block;
@@ -142,9 +153,11 @@ a:hover {
     border: none;
     background: none;
     font-size: 1em;
+    color: var(--main-dark);
 }
 .fzbz button:hover {
     color: white;
+
 }
 .fadeon {
     animation: num 1s;
@@ -178,19 +191,19 @@ a:hover {
 }
 @keyframes num {
     from {color: blue;}
-    to {color: black;}
+    to {color: var(--main-dark);}
 }
 @keyframes fzbz {
     from {color: red;}
-    to {color: black;}
+    to {color: var(--main-dark);}
 }
 @keyframes fz {
     from {color: rgb(0, 215, 0);}
-    to {color: black;}
+    to {color: var(--main-dark);}
 }
 @keyframes bz {
     from {color: yellow;}
-    to {color: black;}
+    to {color: var(--main-dark);}
 }
 
 /* RESPONSIVE */
@@ -241,6 +254,9 @@ a:hover {
     .wpos-large {
         display: none;
     }
+    .right {
+        margin-left: initial;
+    }
 }
 @media (max-width: 800px) {
     main {
@@ -266,13 +282,17 @@ a:hover {
     }
     h1 {
         margin-top: 1em;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     .wpos-small {
         display: inline;
     }
     .wpos-large {
         display: none;
+    }
+
+    .right {
+        margin-left: initial;
     }
 
     .fzbz {
