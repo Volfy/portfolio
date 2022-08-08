@@ -142,7 +142,7 @@ a:hover {
     grid-column: 1/-1;
     grid-row: -3/-2;
     font-size: 4em;
-    /* width: 100%; */
+    width: fit-content;
     font-weight: 600;
     
 }
@@ -273,6 +273,11 @@ a:hover {
         color: none;
         background: none;
     }
+
+    .fzbz {
+        text-align: left;
+        width: 100%;
+    }
 }
 @media (max-width: 750px) {
     main {
@@ -313,6 +318,7 @@ a:hover {
 
     .fzbz {
         text-align: center;
+        width: 100%;
     }
     .fzbz div {
         display: block;
