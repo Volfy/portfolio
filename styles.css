@@ -30,7 +30,8 @@ main {
     height: 100%;
     align-items: center;
 
-    /* animation: fadein 4s; */
+    animation: fadein 2.24s;
+    animation-timing-function: ease-in;
 }
 .left {
     grid-column: 1/7;
