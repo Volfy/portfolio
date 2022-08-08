@@ -257,8 +257,22 @@ a:hover {
     .right {
         margin-left: initial;
     }
+    a {
+        background-color: white;
+        color: var(--main-dark);
+        border: 1px solid white;
+    }
+    a:hover {
+        animation: none;
+        
+    }
+    .card > a {
+        border: none;
+        color: none;
+        background: none;
+    }
 }
-@media (max-width: 800px) {
+@media (max-width: 750px) {
     main {
         display: flex;
         flex-direction: column;
@@ -300,5 +314,19 @@ a:hover {
     }
     .fzbz div {
         display: block;
+    }
+    a {
+        background-color: white;
+        color: var(--main-dark);
+        border: 1px solid white;
+    }
+    a:hover {
+        animation: none;
+        
+    }
+    .card > a {
+        border: none;
+        color: none;
+        background: none;
     }
 }
