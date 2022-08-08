@@ -1,4 +1,22 @@
-const open = document.querySelector(".contact-open");
-const form = document.querySelector(".contact-form").classList;
+const btn = document.querySelector(".fzbz button");
+const div = document.querySelector(".fzbz div");
 
-open.addEventListener('click', () => form.toggle("show"));
+let x = 0;
+
+btn.addEventListener('click', () => {
+    div.classList.remove("fadeon", "fadeon-fz", "fadeon-fz-bz", "fadeon-bz");
+    x += 1;
+    let text = "";
+    let className = "fadeon";
+    if (x % 3 === 0) {
+        text += "Fizz";
+        className += "-fz";
+    }
+    if (x % 5 === 0) {
+        text += "Buzz";
+        className += "-bz";
+    }
+    
+    div.textContent = text === "" ? x : text;
+    setTimeout(() => div.classList.add(className), 1);
+});

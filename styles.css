@@ -24,133 +24,171 @@ body {
 }
 main {
     display: grid;
-    /* grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: repeat(7, 1fr); */
-    grid-template-areas: 
-    ". . . ."
-    ". .  p1 ."
-    ". hd p1 ."
-    ". so p2 ."
-    ". bi p2 ."
-    ". ct p3 ."
-    ". .  p3 ."
-    ". .  gh ."
-    ". . . .";
-    gap: 2em;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(8, 1fr); 
+    gap: 1em;
     height: 100%;
     align-items: center;
+
+    /* animation: fadein 4s; */
 }
-.project1 {
-    grid-area: p1;
+.left {
+    grid-column: 1/7;
+    grid-row: 1/6;
 }
-.project2 {
-    grid-area: p2;
-}
-.project3 {
-    grid-area: p3;
-}
-.github-more {
-    grid-area: gh;
-    align-self: start;
-}
-.head-name {
-    grid-area: hd;
-}
-.bio {
-    grid-area: bi;
-}
-.socials {
-    grid-area: so;
-    text-align: center;
-}
-.contact {
-    grid-area: ct;
+.right {
+    grid-column: 8/18;
+    grid-row: 1/8;
 }
 
 
 
 
-
-
-
+/* GENERAL */
 h1 {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.8em;
+}
+.sasha {
+    font-style: italic;
 }
 img {
     max-width: 400px;
 }
 a {
+    border: 1px solid black;
+    border-radius: 2px;
     text-decoration: none;
     color: var(--accent);
 }
+a:hover {
+    background-color: white;
+    color: var(--main-dark);
+    border: 1px solid white;
+}
+
+
+
+
+
 .card {
     display: flex;
     gap: 2em;
 }
-.proj-side {
-    max-width: 300px;
+/* Remove a styling from imgs in cards */
+.card > a {
+    border: none;
+    color: none;
+}
+.card > a:hover {
+    border: none;
+    color: none;
+    background: none;
+}
+.proj p {
+    margin: 0;
+}
+.links {
+    margin-top: 0.8em;
+}
+.links > a {
+    margin-right: 2em;
 }
 
 
-/* CONTACT */
-.contact-form > form {
-    display: flex;
-    flex-direction: column;
-}
-.contact-form {
-    display: none;
-}
-.contact-open {
-    width: 100%;
-}
-.show {
-    display: block;
-}
 
 
-/* Organize buttons in Projects */
-.buttons > form {
-    display: inline;
-}
 
-/* Just for fun */
-button {
+/* + fizzbuzz fun */
+.fzbz {
+    grid-column: 1/-1;
+    grid-row: -3/-2;
+    font-size: 4em;
+}
+.fzbz div {
+    display: inline-block;
+    font-size: inherit;
+}
+.fzbz button {
     appearance: none;
     border: none;
-    background-color: var(--accent);
-    border-radius: 8px;
-    padding: 10px;
+    background: none;
+    font-size: 1em;
+}
+.fzbz button:hover {
     color: white;
 }
-button:hover {
-    color: var(--accent);
-    background-color: white;
+.fadeon {
+    animation: num 1s;
+}
+.fadeon-fz {
+    animation: fz 1s;
+}
+.fadeon-bz {
+    animation: bz 1s;
+}
+.fadeon-fz-bz {
+    animation: fzbz 1s;
 }
 
+
+
+/* Animations */
+
+@keyframes fadein {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+@keyframes num {
+    from {color: blue;}
+    to {color: black;}
+}
+@keyframes fzbz {
+    from {color: red;}
+    to {color: black;}
+}
+@keyframes fz {
+    from {color: rgb(0, 215, 0);}
+    to {color: black;}
+}
+@keyframes bz {
+    from {color: yellow;}
+    to {color: black;}
+}
 
 /* RESPONSIVE */
 
 @media (min-width: 1400px) {
     main {
         width: 1400px;
-        
+    }
+    .proj-side {
+        max-width: 600px;
     }
 }
-
 @media (max-width: 1400px) {
     main {
-        grid-template-areas:
-        "."
-        "hd"
-        "bi"
-        "so"
-        "p1"
-        "p2"
-        "p3"
-        "gh"
-        "ct"
-        ".";
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proj {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+    .proj-side {
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column;
     }
     .card {
         flex-direction: column;
@@ -159,6 +197,11 @@ button:hover {
     .proj {
         display: flex;
         justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+    .proj-side {
+        width: 100%;
     }
     img {
         max-width: 100%;
