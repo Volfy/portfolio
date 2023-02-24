@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "git": "cp src/index.html dist/index.html && cp -r src/gifs dist/gifs && git add . && git commit -m",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "git": "cp -r src/* dist && rm dist/input.css && git add . && git commit -m",
     "git:push": "git push",
     "deploy": "gh-pages --dist dist --branch release"
   },
