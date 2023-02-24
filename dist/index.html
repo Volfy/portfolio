@@ -26,18 +26,32 @@ class="m-0
       
       <div id="bio" 
       class="">
-        <div class="">C:\> hello world</div>
-        <div>C:\> i'm 
+        <div class=""> 
+          <span aria-hidden="true">C:\></span> 
+          hello world
+        </div>
+        <div>
+          <span aria-hidden="true">C:\></span> 
+          i'm 
           <span>Andre 'Sasha' Sammut</span>
         </div>
-        <div>C:\> i'm a 
+        <div>
+          <span aria-hidden="true">C:\></span> 
+          i'm a 
           <span>Full Stack Web Developer</span>
+          based in
+          <span>Malta</span>
         </div>
-        <div>C:\> i love to 
-          <span>Learn</span> and 
+        <div> 
+          <span aria-hidden="true">C:\></span> 
+          i love to 
+          <span>Learn</span> 
+          and 
           <span>Build</span>
         </div>
-        <div>C:\> <span id="blinker" class="hidden">_</span></div>
+        <div aria-hidden="true">
+          C:\> <span id="blinker" class="hidden">_</span>
+        </div>
       </div>
 
       <div id="resume"
@@ -61,7 +75,7 @@ class="m-0
           <button onclick="moreInfo('project-1-details')">
             <img id="project-1-button" 
             class="blinker-fx" 
-            src="img/gifs/sign-up-form.gif" alt="">
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
           <div id="project-1-details" 
@@ -81,7 +95,7 @@ class="m-0
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
             class="blinker-fx" 
-            src="img/gifs/sign-up-form.gif" alt="">
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
 
           <div id="project-2-details" 
@@ -101,7 +115,7 @@ class="m-0
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
             class="blinker-fx" 
-            src="img/gifs/sign-up-form.gif" alt="">
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
 
           <div id="project-3-details" class="hidden" >
@@ -154,13 +168,27 @@ class="m-0
 
     </div>
 
-  </div>
 
+    <button id="scroll-to-top" onclick="returnToTop()"
+    class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+  </div>
 
   <script>
     const moreInfo = (id) => {
       const stuff = document.getElementById(id)
       stuff.classList.toggle('hidden')
+    }
+
+    let scrollToTop = document.getElementById('scroll-to-top')
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTop.classList.remove('hidden')
+      } else { scrollToTop.classList.add('hidden') }
+    }
+
+    const returnToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     const blinker = document.getElementById('blinker')
