@@ -2,8 +2,7 @@
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "git": "cp -r src/* dist && rm dist/input.css && git add . && git commit -m",
-    "git:push": "git push",
-    "deploy": "gh-pages --dist dist --branch release"
+    "deploy": "git push && gh-pages --dist dist --branch release"
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
