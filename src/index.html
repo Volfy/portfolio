@@ -41,7 +41,7 @@ class="m-0
       </div>
 
       <div id="resume"
-      class="">
+      class="blinker-fx">
         <a href="http://google.com">Resume</a>
       </div>
     
@@ -59,8 +59,9 @@ class="m-0
         class="">
           
           <button onclick="moreInfo('project-1-details')">
-            <img class="" 
-                      src="img/gifs/sign-up-form.gif" alt="">
+            <img id="project-1-button" 
+            class="blinker-fx" 
+            src="img/gifs/sign-up-form.gif" alt="">
           </button>
 
           <div id="project-1-details" 
@@ -78,8 +79,9 @@ class="m-0
         class="">
           
           <button onclick="moreInfo('project-2-details')">
-            <img class="" 
-                      src="img/gifs/sign-up-form.gif" alt="">
+            <img id="project-2-button"
+            class="blinker-fx" 
+            src="img/gifs/sign-up-form.gif" alt="">
           </button>
 
           <div id="project-2-details" 
@@ -97,8 +99,9 @@ class="m-0
         class="">
           
           <button onclick="moreInfo('project-3-details')">
-            <img class="" 
-                      src="img/gifs/sign-up-form.gif" alt="">
+            <img id="project-3-button" 
+            class="blinker-fx" 
+            src="img/gifs/sign-up-form.gif" alt="">
           </button>
 
           <div id="project-3-details" class="hidden" >
@@ -129,16 +132,20 @@ class="m-0
           class="">
             <a href="http://github.com">
               <img src="img/github-mark.png" alt="" 
-              class="">
+              id="github"
+              class="blinker-fx">
             </a>  
             <a href="http://linkedin.com">
               <img src="img/LI-In-Bug.png" alt="" 
-              class="" >
+              id="linkedin"
+              class="blinker-fx" >
             </a>
           </div>
         </div>
         <div>
-          <a href="mailto:andre.sammut98@gmail.com">
+          <a id="email"
+          class="blinker-fx"
+          href="mailto:andre.sammut98@gmail.com">
             andre.sammut98@gmail.com
           </a>
         </div>
@@ -155,8 +162,36 @@ class="m-0
       const stuff = document.getElementById(id)
       stuff.classList.toggle('hidden')
     }
+
     const blinker = document.getElementById('blinker')
-    setInterval(() => blinker.classList.toggle('hidden'), 850)
+    let intervalId = setInterval(() => blinker.classList.toggle('hidden'), 850)
+
+    const resetBlinker = () => {
+      blinker.textContent = '_'
+      clearInterval(intervalId)
+      intervalId = setInterval(() => blinker.classList.toggle('hidden'), 850)  
+    }
+    const changeBlinker = (title) => {
+      blinker.classList.remove('hidden')
+      clearInterval(intervalId)
+      blinker.textContent = title
+    }
+
+    const blinkerNames = {
+      'resume': 'Resume',
+      'project-1-button': 'Twitter Clone',
+      'project-2-button': 'Twitter Clone 2',
+      'project-3-button': 'Twitter Clone 3',
+      'github': 'GitHub',
+      'linkedin': 'LinkedIn',
+      'email': 'Email',
+    }
+
+    const blinkerItems = document.querySelectorAll('.blinker-fx')
+    blinkerItems.forEach(x => x.addEventListener('mouseover', () => changeBlinker(blinkerNames[x.id])))
+    blinkerItems.forEach(x => x.addEventListener('mouseleave', resetBlinker))
+    blinkerItems.forEach(x => x.addEventListener('mouseup', resetBlinker))
+
   </script>
 
 </body>

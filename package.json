@@ -2,7 +2,7 @@
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "move": "cp -r src/* dist && rm dist/input.css && sed -i 's@/dist/output.css@output.css@' dist/index.html",
-    "git":  "npm run move && git add . && git commit -m",
+    "git":  "git add . && git commit -m",
     "deploy": "git push && gh-pages --dist dist --branch release"
   },
   "devDependencies": {
