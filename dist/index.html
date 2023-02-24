@@ -15,14 +15,8 @@
 <body 
 class="m-0 
       w-screen h-screen 
-      flex flex-col items-center">
-  
-  <script>
-    const moreInfo = (id) => {
-      const stuff = document.getElementById(id)
-      stuff.classList.toggle('hidden')
-    }
-  </script>
+      flex flex-col items-center
+      font-mono">
   
   <div id="container" 
   class="">
@@ -32,12 +26,20 @@ class="m-0
       
       <div id="bio" 
       class="">
-        <div>Hello World</div>
-        <div>> I'm Andre 'Sasha' Sammut</div>
-        <div>> I'm a Full Stack Web Developer</div>
-        <div>> I love to Learn and Build</div>
+        <div class="">C:\> hello world</div>
+        <div>C:\> i'm 
+          <span>Andre 'Sasha' Sammut</span>
+        </div>
+        <div>C:\> i'm a 
+          <span>Full Stack Web Developer</span>
+        </div>
+        <div>C:\> i love to 
+          <span>Learn</span> and 
+          <span>Build</span>
+        </div>
+        <div>C:\> <span id="blinker" class="hidden">_</span></div>
       </div>
-      
+
       <div id="resume"
       class="">
         <a href="http://google.com">Resume</a>
@@ -146,5 +148,16 @@ class="m-0
     </div>
 
   </div>
+
+
+  <script>
+    const moreInfo = (id) => {
+      const stuff = document.getElementById(id)
+      stuff.classList.toggle('hidden')
+    }
+    const blinker = document.getElementById('blinker')
+    setInterval(() => blinker.classList.toggle('hidden'), 850)
+  </script>
+
 </body>
 </html>
