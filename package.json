@@ -2,7 +2,7 @@
   "scripts": {
     "git": "cp src/index.html dist/index.html && cp -r src/gifs dist/gifs && git add . && git commit -m",
     "git:push": "git push",
-    "deploy": "gh-pages --dist 'dist' --branch 'release'"
+    "deploy": "gh-pages --dist dist --branch release"
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
