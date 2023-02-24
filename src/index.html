@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>André Sammut Portfolio | Full Stack Web Developer</title>
+
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon-light.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="img/favicon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="img/favicon-light.png" media="(prefers-color-scheme: no-preference)">
   
 </head>
-<body class="m-0 
-            w-screen h-screen 
-            flex flex-col items-center
-            text-base md:text-3xl lg:text-5xl">
+<body 
+class="m-0 
+      w-screen h-screen 
+      flex flex-col items-center">
   
   <script>
     const moreInfo = (id) => {
@@ -21,118 +24,122 @@
     }
   </script>
   
-  <div class="flex flex-col justify-evenly items-center
-              w-11/12 h-screen">
+  <div id="container" 
+  class="">
 
-    <div class="flex lg:flex-row flex-col flex-wrap items-center 
-                w-11/12
-                m-2 mt-10">
+    <div id="top" 
+    class="">
       
-      <div class="w-10/12">
+      <div id="bio" 
+      class="">
         <div>Hello World</div>
         <div>> I'm Andre 'Sasha' Sammut</div>
         <div>> I'm a Full Stack Web Developer</div>
-        <div>> I love to learn and Build</div>
+        <div>> I love to Learn and Build</div>
       </div>
-      <div class="w-2/12">
-        resume
+      
+      <div id="resume"
+      class="">
+        <a href="http://google.com">Resume</a>
       </div>
     
       
     </div>
 
-    <div class="flex flex-col justify-evenly items-center">
-      <hr class="m-10
-              border-4 border-red-400 
-              w-11/12">
-      <div class="flex lg:flex-row flex-col items-center justify-evenly">
-        
+    <div id="middle" 
+    class="">
+      <hr class="border-4 border-red-400 ">
 
-        <div class="w-4/12">
-          <button onclick="moreInfo('proj-1')">
-            <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
+      <div id="projects"
+      class="">
+
+        <div id="project-1"
+        class="">
+          
+          <button onclick="moreInfo('project-1-details')">
+            <img class="" 
                       src="img/gifs/sign-up-form.gif" alt="">
           </button>
-          <div class="hidden" id="proj-1">
-            <div>TITLE</div>
-            <div>DESCRiptionssssssss</div>
+
+          <div id="project-1-details" 
+          class="hidden">
+            <div>Twitter Clone</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div>
-              <div>Github</div>
-              <div>Live Deployment</div>
+              <div>GitHub Repo</div>
+              <div>Live Site</div>
             </div>
           </div>
         </div>
 
-        <div class="w-4/12">
-          <button onclick="moreInfo('proj-2')">
-            <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
+        <div id="project-2"
+        class="">
+          
+          <button onclick="moreInfo('project-2-details')">
+            <img class="" 
                       src="img/gifs/sign-up-form.gif" alt="">
           </button>
-          <div class="hidden" id="proj-2">
-            <div>TITLE</div>
-            <div>DESCRiptionssssssss</div>
+
+          <div id="project-2-details" 
+          class="hidden">
+            <div>Twitter Clone 2</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div>
-              <div>Github</div>
-              <div>Live Deployment</div>
+              <div>GitHub Repo</div>
+              <div>Live Site</div>
             </div>
           </div>
         </div>
 
-        <div class="w-4/12">
-          <button onclick="moreInfo('proj-3')">
-            <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
+        <div id="project-3"
+        class="">
+          
+          <button onclick="moreInfo('project-3-details')">
+            <img class="" 
                       src="img/gifs/sign-up-form.gif" alt="">
           </button>
-          <div class="hidden" id="proj-3">
-            <div>TITLE</div>
-            <div>DESCRiptionssssssss</div>
+
+          <div id="project-3-details" class="hidden" >
+            <div>Twitter Clone 3</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div>
-              <div>Github</div>
-              <div>Live Deployment</div>
-            </div>
+              <div>GitHub Repo</div>
+              <div>Live Site</div>
           </div>
         </div>
       </div>
-      <hr class="m-10
-                border-4 border-red-400 
-                w-11/12">
+
+      <hr class="border-4 border-red-400">
     </div>
-    
 
-    
+    <div id="footer"
+    class="">
 
-    <div class="text-base md:text-1xl lg:text-3xl
-                bottom-0
-                mb-10">
-
-      <div class="flex flex-col
-                  mx-auto 
-                  w-full">
+      <div id="footer-content"
+      class="">
                   
-        <div class="flex flex-row items-center
-                    w-full">
+        <div id="footer-content-top"
+        class="">
 
           <div>Get In Touch</div>
 
-          <div class="flex flex-row justify-between 
-                      w-3/12">
-            <img class="mr-2 
-                        h-10 
-                        shrink-0" src="img/github-mark.png" alt=""> 
-            <img class="h-10 
-                        shrink-0" src="img/LI-In-Bug.png" alt="">
+          <div id="socials"
+          class="">
+            <a href="http://github.com">
+              <img src="img/github-mark.png" alt="" 
+              class="">
+            </a>  
+            <a href="http://linkedin.com">
+              <img src="img/LI-In-Bug.png" alt="" 
+              class="" >
+            </a>
           </div>
         </div>
-        <div>Ennaila.@enail.com</div>
+        <div>
+          <a href="mailto:andre.sammut98@gmail.com">
+            andre.sammut98@gmail.com
+          </a>
+        </div>
 
       </div>
 

@@ -513,41 +513,42 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 .m-0 {
   margin: 0px;
-}
-
-.m-10 {
-  margin: 2.5rem;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
-.m-auto {
-  margin: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .flex {
@@ -558,76 +559,20 @@ video {
   display: none;
 }
 
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-screen {
   height: 100vh;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
-}
-
-.w-3\/12 {
-  width: 25%;
-}
-
-.w-4\/12 {
-  width: 33.333333%;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-screen {
   width: 100vw;
 }
 
-.shrink-0 {
-  flex-shrink: 0;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
 }
 
 .border-4 {
@@ -637,37 +582,4 @@ video {
 .border-red-400 {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:flex-row {
-    flex-direction: row;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
