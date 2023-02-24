@@ -13,6 +13,14 @@
             w-screen h-screen 
             flex flex-col items-center
             text-base md:text-3xl lg:text-5xl">
+  
+  <script>
+    const moreInfo = (id) => {
+      const stuff = document.getElementById(id)
+      stuff.classList.toggle('hidden')
+    }
+  </script>
+  
   <div class="flex flex-col justify-evenly items-center
               w-11/12 h-screen">
 
@@ -41,25 +49,57 @@
         
 
         <div class="w-4/12">
-          <img class="w-11/12 
+          <button onclick="moreInfo('proj-1')">
+            <img class="w-11/12 
                       aspect-[4/3] object-cover 
                       m-auto 
                       rounded-3xl" 
                       src="img/gifs/sign-up-form.gif" alt="">
+          </button>
+          <div class="hidden" id="proj-1">
+            <div>TITLE</div>
+            <div>DESCRiptionssssssss</div>
+            <div>
+              <div>Github</div>
+              <div>Live Deployment</div>
+            </div>
+          </div>
         </div>
+
         <div class="w-4/12">
-          <img class="w-11/12 
+          <button onclick="moreInfo('proj-2')">
+            <img class="w-11/12 
                       aspect-[4/3] object-cover 
                       m-auto 
                       rounded-3xl" 
                       src="img/gifs/sign-up-form.gif" alt="">
+          </button>
+          <div class="hidden" id="proj-2">
+            <div>TITLE</div>
+            <div>DESCRiptionssssssss</div>
+            <div>
+              <div>Github</div>
+              <div>Live Deployment</div>
+            </div>
+          </div>
         </div>
+
         <div class="w-4/12">
-          <img class="w-11/12 
+          <button onclick="moreInfo('proj-3')">
+            <img class="w-11/12 
                       aspect-[4/3] object-cover 
                       m-auto 
                       rounded-3xl" 
                       src="img/gifs/sign-up-form.gif" alt="">
+          </button>
+          <div class="hidden" id="proj-3">
+            <div>TITLE</div>
+            <div>DESCRiptionssssssss</div>
+            <div>
+              <div>Github</div>
+              <div>Live Deployment</div>
+            </div>
+          </div>
         </div>
       </div>
       <hr class="m-10
