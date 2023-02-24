@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "move": "cp src/index.html dist/index.html && cp -r src/gifs dist/gifs"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
