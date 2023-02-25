@@ -19,43 +19,44 @@ class="m-0
       font-mono">
   
   <div id="container" 
-  class="">
+  class="m-4">
 
     <div id="top" 
     class="">
       
       <div id="bio" 
       class="">
-        <div class=""> 
+        <div > 
           <span aria-hidden="true">C:\></span> 
-          hello world
+          <span class="font-bold">hello world!</span>
         </div>
         <div>
           <span aria-hidden="true">C:\></span> 
           i'm 
-          <span>Andre 'Sasha' Sammut</span>
+          <span class="font-bold">Andre 'Sasha' Sammut</span>
         </div>
         <div>
           <span aria-hidden="true">C:\></span> 
           i'm a 
-          <span>Full Stack Web Developer</span>
+          <span class="font-bold">Full Stack Web Developer</span>
           based in
-          <span>Malta</span>
+          <span class="font-bold">Malta</span>
         </div>
         <div> 
           <span aria-hidden="true">C:\></span> 
           i love to 
-          <span>Learn</span> 
+          <span class="font-bold">Learn</span> 
           and 
-          <span>Build</span>
+          <span class="font-bold">Build</span>
+          things
         </div>
         <div aria-hidden="true">
-          C:\> <span id="blinker" class="hidden">_</span>
+          C:\> <span id="blinker" class="hidden font-bold">_</span>
         </div>
       </div>
 
       <div id="resume"
-      class="blinker-fx">
+      class="blinker-fx m-4 flex flex-col items-center font-bold">
         <a href="http://google.com">Resume</a>
       </div>
     
@@ -63,100 +64,102 @@ class="m-0
     </div>
 
     <div id="middle" 
-    class="">
-      <hr class="border-4 border-red-400 ">
+    class="flex flex-col justify-between gap-4">
+      <hr class="border-4 border-red-400 mt-4">
 
       <div id="projects"
-      class="">
+      class="flex flex-col justify-between gap-4">
 
         <div id="project-1"
-        class="">
+        class="leading-none">
           
           <button onclick="moreInfo('project-1-details')">
             <img id="project-1-button" 
-            class="blinker-fx" 
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
           <div id="project-1-details" 
           class="hidden">
-            <div>Twitter Clone</div>
+            <div class="my-4 text-center font-bold">Twitter Clone</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            <div>
-              <div>GitHub Repo</div>
-              <div>Live Site</div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
             </div>
           </div>
         </div>
 
         <div id="project-2"
-        class="">
+        class="leading-none">
           
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
-            class="blinker-fx" 
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
 
           <div id="project-2-details" 
           class="hidden">
-            <div>Twitter Clone 2</div>
+            <div class="my-4 text-center font-bold">Twitter Clone 2</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            <div>
-              <div>GitHub Repo</div>
-              <div>Live Site</div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
             </div>
           </div>
         </div>
 
         <div id="project-3"
-        class="">
+        class="leading-none">
           
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
-            class="blinker-fx" 
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
 
           <div id="project-3-details" class="hidden" >
-            <div>Twitter Clone 3</div>
+            <div class="my-4 text-center font-bold">Twitter Clone 3</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            <div>
-              <div>GitHub Repo</div>
-              <div>Live Site</div>
-          </div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
+            </div>
         </div>
       </div>
 
-      <hr class="border-4 border-red-400">
+      <hr class="border-4 border-red-400 mb-2">
     </div>
 
     <div id="footer"
     class="">
 
       <div id="footer-content"
-      class="">
+      class="flex flex-col items-center">
                   
         <div id="footer-content-top"
-        class="">
+        class="flex flex-row justify-between gap-4">
 
-          <div>Get In Touch</div>
+          <div class="font-bold">Get In Touch:</div>
 
           <div id="socials"
-          class="">
-            <a href="http://github.com">
+          class="flex flex-row justify-between gap-4">
+            <a href="http://github.com"
+            class="">
               <img src="img/github-mark.png" alt="" 
               id="github"
-              class="blinker-fx">
+              class="blinker-fx h-6 w-6 shrink-0">
             </a>  
-            <a href="http://linkedin.com">
-              <img src="img/LI-In-Bug.png" alt="" 
+            <a href="http://linkedin.com"
+            class="">
+              <img src="img/linkedin.png" alt="" 
               id="linkedin"
-              class="blinker-fx" >
+              class="blinker-fx h-6 w-6 shrink-0" >
             </a>
           </div>
         </div>
-        <div>
+        <div class="mb-4">
           <a id="email"
           class="blinker-fx"
           href="mailto:andre.sammut98@gmail.com">
@@ -170,7 +173,7 @@ class="m-0
 
 
     <button id="scroll-to-top" onclick="returnToTop()"
-    class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+    class="hidden fixed z-90 bottom-8 right-4 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
   </div>
 
   <script>
