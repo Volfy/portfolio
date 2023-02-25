@@ -24,7 +24,6 @@ class="m-0
 
     <div id="top" 
     class="lg:flex lg:flex-row lg:justify-between lg:items-center lg:mt-8">
-      <div id="debug"></div>
       <div id="bio" 
       class="">
         <div > 
@@ -184,11 +183,12 @@ class="m-0
   </div>
 
   <script>
-    if(window.matchMedia('pointer: coarse').matches || window.matchMedia('pointer: none').matches) {
-      document.getElementById('debug').textContent = "REACHED"
+    let isCoarse = true
+    if(window.matchMedia('pointer: fine').matches) {
       document.querySelectorAll('#projects > div > button > img').forEach(b => {
-        b.classList.remove('hover:border-gray-800', 'md:hover:border-gray-800')
+        b.classList.add('hover:border-gray-800', 'md:hover:border-gray-800')
       })
+      isCoarse = false
     }
     
     const moreInfo = (id) => {
@@ -197,7 +197,7 @@ class="m-0
       const selected = document.getElementById(projectId)
       const active = document.querySelector('.active-proj')
       
-      selected.querySelector('button > img').classList.toggle('border-gray-800')
+      isCoarse && selected.querySelector('button > img').classList.toggle('border-gray-800')
       
       if(screen.width < 1024) {
         details.classList.toggle('hidden')
