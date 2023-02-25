@@ -19,10 +19,11 @@ class="m-0
       font-mono">
   
   <div id="container" 
-  class="relative h-full flex flex-col m-4 sm:m-10 sm:text-lg">
+  class="relative h-full flex flex-col m-4 sm:m-10 sm:text-lg md:text-xl lg:text-2xl 
+  2xl:text-3xl 2xl:max-w-[1800px]">
 
     <div id="top" 
-    class="">
+    class="lg:flex lg:flex-row lg:justify-between lg:items-center lg:mt-8">
       
       <div id="bio" 
       class="">
@@ -57,7 +58,7 @@ class="m-0
       </div>
 
       <div id="resume"
-      class="blinker-fx m-4 flex flex-col items-center font-bold">
+      class="blinker-fx m-4 flex flex-col items-center font-bold lg:mr-20">
         <a href="http://google.com">Resume</a>
       </div>
     
@@ -65,19 +66,19 @@ class="m-0
     </div>
 
     <div id="middle" 
-    class="flex flex-col justify-between gap-4 sm:gap-8 flex-1">
-      <hr class="border-4 border-red-400 mt-4">
+    class="flex flex-col justify-between flex-1 gap-4 sm:gap-8 lg:gap-12">
+      <hr class="border-4 border-red-400 mt-4 lg:mt-24">
 
       <div id="projects"
-      class="flex flex-col lg:flex-row justify-between gap-4 sm:gap-8">
+      class="flex flex-col xl:flex-row justify-between gap-4 sm:gap-8 lg:gap-12">
 
         <div id="project-1"
         class="leading-none md:flex md:flex-row md:gap-8 md:items-center">
           
           <button onclick="moreInfo('project-1-details')" class="">
             <img id="project-1-button" 
-            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
-            md:aspect-[4/3] md:object-cover" 
+            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
@@ -97,8 +98,8 @@ class="m-0
           
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
-            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
-            md:aspect-[4/3] md:object-cover" 
+            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
 
@@ -118,8 +119,8 @@ class="m-0
           
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
-            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
-            md:aspect-[4/3] md:object-cover" 
+            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
 
@@ -135,7 +136,7 @@ class="m-0
 
       </div>
 
-      <hr class="border-4 border-red-400 mb-4 sm:mb-8">
+      <hr class="border-4 border-red-400 mb-4 sm:mb-8 lg:mb-24">
     </div>
 
     <div id="footer"
@@ -183,16 +184,26 @@ class="m-0
   </div>
 
   <script>
+    if(window.matchMedia('hover: none').matches || window.matchMedia("(any-hover: none)").matches) {
+      document.querySelectorAll('#projects > div > button > img').forEach(b => {
+        b.classList.remove('hover:border-gray-800', 'md:hover:border-gray-800')
+      })
+    }
+    
     const moreInfo = (id) => {
+      const details = document.getElementById(id)
+      const projectId = id.replace('-details', '')
+      const selected = document.getElementById(projectId)
+      const active = document.querySelector('.active-proj')
+      
+      selected.classList.toggle('border-gray-800', 'md:border-gray-800')
+      active && active.classList.toggle('border-gray-800', 'md:border-gray-800')
+
       if(screen.width < 1024) {
-        const details = document.getElementById(id)
         details.classList.toggle('hidden')
+        
       } else {
-        const projectId = id.replace('-details', '')
-        const details = document.getElementById(id)
         const container = document.getElementById('projects')
-        const selected = document.getElementById(projectId)
-        const active = document.querySelector('.active-proj')
         const otherProjects = Array.from(document.querySelectorAll('#projects > div'))
                               .map(p => p.id)
                               .filter(p => p !== projectId)
@@ -204,7 +215,7 @@ class="m-0
           selected.classList.remove('active-proj', 'row-span-2', 'col-span-9', 'items-center')
           selected.querySelector('button').classList.remove('flex-[2_1_0%]')
           document.querySelectorAll('button > img').forEach(p => {
-            p.classList.add('md:aspect-[4/3]', 'md:object-cover')
+            p.classList.add('xl:aspect-[4/3]', 'xl:object-cover')
           })
         
           details.classList.add('hidden')
@@ -229,7 +240,7 @@ class="m-0
         selected.classList.remove('col-start-10', 'col-span-3')
         selected.querySelector('button').classList.add('flex-[2_1_0%]')
         document.querySelectorAll('button > img').forEach(p => {
-          p.classList.remove('md:aspect-[4/3]', 'md:object-cover')
+          p.classList.remove('xl:aspect-[4/3]', 'xl:object-cover')
         })
         
         details.classList.remove('hidden')
