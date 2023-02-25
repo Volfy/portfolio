@@ -580,12 +580,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -600,8 +604,8 @@ video {
   height: 3rem;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-screen {
@@ -612,16 +616,12 @@ video {
   height: 2rem;
 }
 
-.h-7 {
-  height: 1.75rem;
-}
-
 .w-12 {
   width: 3rem;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-screen {
@@ -630,10 +630,6 @@ video {
 
 .w-8 {
   width: 2rem;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .shrink-0 {
@@ -692,6 +688,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-mono {
