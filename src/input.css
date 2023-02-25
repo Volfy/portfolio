@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.8,0.8);
+    opacity: 30%;
+  }
+  100% {
+    transform: scale(1,1);
+    opacity: 100%;
+  }
+}
+
+#top {
+  animation: scaling 0.4s ease-in-out 0.2s 1;
+}
+
+#projects {
+  animation: scaling 0.4s ease-in-out 0.25s 1;
+}
+
+#footer {
+  animation: scaling 0.4s ease-in-out 0.3s 1;
+}
+
+hr {
+  animation: scaling 0.4s ease-in-out 0.35s 1;
+}
