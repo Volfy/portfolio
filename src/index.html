@@ -72,11 +72,11 @@ class="m-0
       class="flex flex-col xl:flex-row justify-between gap-4 sm:gap-8 lg:gap-12">
 
         <div id="project-1"
-        class="leading-none md:flex md:flex-row md:gap-8 md:items-center">
+        class="leading-none lg:flex lg:flex-row lg:gap-8 md:items-center">
           
           <button onclick="moreInfo('project-1-details')" class="">
             <img id="project-1-button" 
-            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
             xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
@@ -93,11 +93,11 @@ class="m-0
         </div>
 
         <div id="project-2"
-        class="leading-none md:flex md:flex-row md:gap-8">
+        class="leading-none lg:flex lg:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
-            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
             xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
@@ -114,11 +114,11 @@ class="m-0
         </div>
 
         <div id="project-3"
-        class="leading-none md:flex md:flex-row md:gap-8">
+        class="leading-none lg:flex lg:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
-            class="blinker-fx hover:border-gray-800 md:hover:border-gray-800 border-4 rounded-2xl md:rounded-3xl
+            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
             xl:aspect-[4/3] xl:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
@@ -184,13 +184,12 @@ class="m-0
 
   <script>
     let isCoarse = true
-    if(window.matchMedia('pointer: fine').matches) {
+    if(window.matchMedia('(pointer: fine)').matches) {
       document.querySelectorAll('#projects > div > button > img').forEach(b => {
         b.classList.add('hover:border-gray-800', 'md:hover:border-gray-800')
       })
       isCoarse = false
     }
-    
     const moreInfo = (id) => {
       const details = document.getElementById(id)
       const projectId = id.replace('-details', '')
@@ -201,7 +200,6 @@ class="m-0
       
       if(screen.width < 1024) {
         details.classList.toggle('hidden')
-        
       } else {
         const container = document.getElementById('projects')
         const otherProjects = Array.from(document.querySelectorAll('#projects > div'))
