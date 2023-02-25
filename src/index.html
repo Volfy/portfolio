@@ -184,7 +184,7 @@ class="m-0
   </div>
 
   <script>
-    if(window.matchMedia('hover: none').matches || window.matchMedia("(any-hover: none)").matches) {
+    if(window.matchMedia('pointer: coarse').matches) {
       document.querySelectorAll('#projects > div > button > img').forEach(b => {
         b.classList.remove('hover:border-gray-800', 'md:hover:border-gray-800')
       })
@@ -196,9 +196,8 @@ class="m-0
       const selected = document.getElementById(projectId)
       const active = document.querySelector('.active-proj')
       
-      selected.classList.toggle('border-gray-800', 'md:border-gray-800')
-      active && active.classList.toggle('border-gray-800', 'md:border-gray-800')
-
+      selected.querySelector('button > img').classList.toggle('border-gray-800')
+      
       if(screen.width < 1024) {
         details.classList.toggle('hidden')
         
