@@ -72,9 +72,9 @@ class="m-0
       class="flex flex-col lg:flex-row justify-between gap-4 sm:gap-8">
 
         <div id="project-1"
-        class="leading-none md:flex md:flex-row md:gap-8">
+        class="leading-none md:flex md:flex-row md:gap-8 md:items-center">
           
-          <button onclick="moreInfo('project-1-details')">
+          <button onclick="moreInfo('project-1-details')" class="">
             <img id="project-1-button" 
             class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
             md:aspect-[4/3] md:object-cover" 
@@ -133,10 +133,6 @@ class="m-0
           </div>
         </div>
 
-        <div id="unselected" class="hidden">
-
-        </div>
-
       </div>
 
       <hr class="border-4 border-red-400 mb-4 sm:mb-8">
@@ -192,52 +188,62 @@ class="m-0
         const details = document.getElementById(id)
         details.classList.toggle('hidden')
       } else {
-        const styles = ['md:aspect-[4/3]','md:object-cover']
-        const projectNumber = id.replace('-details', '')
-        const selected = document.getElementById(projectNumber)
-        const container = document.querySelector('#projects')
-        const newContainer = document.querySelector('#unselected')
-
-        if(selected.classList.contains('active-proj') || document.querySelector('.active-proj') !== null) {
-          const active = document.querySelector('.active-proj')
-          const details = document.querySelector('.active-proj > div')
-          details.classList.toggle('hidden')
-          active.classList.remove('active-proj')
-          styles.forEach(s => active.firstElementChild.firstElementChild.classList.toggle(s))
-          
-          newContainer.classList.add('hidden')
-          const otherProjects = Array.from(document.querySelectorAll('#unselected > div')).concat(active)
-                                .sort((a, b) => a.id.replace('project-', '') - b.id.replace('project-', ''))
-          otherProjects.forEach(p => {
-            container.appendChild(p)
-          })
-          container.appendChild(newContainer)
-
-          if (active.id === projectNumber) {
-            return
-          }
-        }
-
+        const projectId = id.replace('-details', '')
+        const details = document.getElementById(id)
+        const container = document.getElementById('projects')
+        const selected = document.getElementById(projectId)
+        const active = document.querySelector('.active-proj')
         const otherProjects = Array.from(document.querySelectorAll('#projects > div'))
-                              .filter(p => p.id !== projectNumber && p.id !== 'unselected')
                               .map(p => p.id)
+                              .filter(p => p !== projectId)
 
-        selected.classList.add('active-proj')
-        styles.forEach(s => selected.firstElementChild.firstElementChild.classList.toggle(s))
-        newContainer.classList.remove('hidden')
+        if (active && selected.id === active.id) {
+          container.classList.add('flex', 'flex-col', 'lg:flex-row', 'justify-between')
+          container.classList.remove('grid', 'grid-cols-12', 'grid-rows-2', 'grid-flow-row-dense')
+        
+          selected.classList.remove('active-proj', 'row-span-2', 'col-span-9', 'items-center')
+          selected.querySelector('button').classList.remove('flex-[2_1_0%]')
+          document.querySelectorAll('button > img').forEach(p => {
+            p.classList.add('md:aspect-[4/3]', 'md:object-cover')
+          })
+        
+          details.classList.add('hidden')
+          details.classList.remove('flex-1')
+
+          otherProjects.forEach(p => {
+            const curr = document.getElementById(p)
+            curr.classList.remove('col-start-10', 'col-span-3')
+          })
+
+          return 
+        }
+        if (active) {
+          moreInfo(active.id)
+          moreInfo(id)
+        }
+        
+        container.classList.remove('flex', 'flex-col', 'lg:flex-row', 'justify-between')
+        container.classList.add('grid', 'grid-cols-12', 'grid-rows-2', 'grid-flow-row-dense')
+        
+        selected.classList.add('active-proj', 'row-span-2', 'col-span-9', 'items-center')
+        selected.classList.remove('col-start-10', 'col-span-3')
+        selected.querySelector('button').classList.add('flex-[2_1_0%]')
+        document.querySelectorAll('button > img').forEach(p => {
+          p.classList.remove('md:aspect-[4/3]', 'md:object-cover')
+        })
+        
+        details.classList.remove('hidden')
+        details.classList.add('flex-1')
 
         otherProjects.forEach(p => {
           const curr = document.getElementById(p)
-          newContainer.appendChild(curr)
+          curr.classList.add('col-start-10', 'col-span-3')
+          curr.querySelector('div').classList.add('hidden')
         })
-        
-        const details = document.getElementById(id)
-        details.classList.toggle('hidden')
       }
-      
-
-      
     }
+    
+    // scroll top button
 
     let scrollToTop = document.getElementById('scroll-to-top')
 
@@ -250,6 +256,8 @@ class="m-0
     const returnToTop = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+
+    // blinker display
 
     const blinker = document.getElementById('blinker')
     let intervalId = setInterval(() => blinker.classList.toggle('hidden'), 850)
