@@ -184,7 +184,7 @@ class="m-0
   </div>
 
   <script>
-    if(window.matchMedia('pointer: coarse').matches) {
+    if(window.matchMedia('pointer: coarse').matches || window.matchMedia('pointer: none').matches) {
       document.querySelectorAll('#projects > div > button > img').forEach(b => {
         b.classList.remove('hover:border-gray-800', 'md:hover:border-gray-800')
       })

@@ -843,11 +843,6 @@ video {
     border-radius: 1.5rem;
   }
 
-  .md\:border-gray-800 {
-    --tw-border-opacity: 1;
-    border-color: rgb(31 41 55 / var(--tw-border-opacity));
-  }
-
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
