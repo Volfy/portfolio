@@ -62,7 +62,8 @@ class="m-0
       class="blinker-fx m-4 flex flex-col items-center font-bold lg:mr-20">
         
         <button type="button"
-        class="flex items-center border-gray-600 border-2 md:border-4 rounded-lg px-4 py-2">
+        class="flex items-center border-gray-600 border-2 md:border-4 rounded-lg px-4 py-2 
+        focus:outline-none focus:border-blue-900 hover:bg-gray-600 hover:border-gray-100 hover:text-gray-100">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
@@ -83,10 +84,10 @@ class="m-0
         <div id="project-1"
         class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8 md:items-center">
           
-          <button onclick="moreInfo('project-1-details')" class="">
+          <button onclick="moreInfo('project-1-details')" class="focus:outline-none">
             <img id="project-1-button" 
             class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-1000" 
+            xl:aspect-[4/3] xl:object-cover transition-all duration-600" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
@@ -104,10 +105,10 @@ class="m-0
         <div id="project-2"
         class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
-          <button onclick="moreInfo('project-2-details')">
+          <button onclick="moreInfo('project-2-details')" class="focus:outline-none">
             <img id="project-2-button"
             class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-1000" 
+            xl:aspect-[4/3] xl:object-cover transition-all duration-600" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
 
@@ -125,10 +126,11 @@ class="m-0
         <div id="project-3"
         class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
-          <button onclick="moreInfo('project-3-details')">
+          <button onclick="moreInfo('project-3-details')" class="focus:outline-none">
             <img id="project-3-button" 
             class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-1000" 
+            xl:aspect-[4/3] xl:object-cover transition-all duration-600
+            focus:outline-none focus:ring" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
 
@@ -188,7 +190,7 @@ class="m-0
 
 
     <button id="scroll-to-top" onclick="returnToTop()"
-    class="hidden fixed z-90 bottom-8 right-4 border-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+    class="hidden focus:outline-none focus:ring fixed z-90 bottom-8 right-4 border-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
   </div>
 
   <script>
