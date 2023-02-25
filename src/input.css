@@ -28,3 +28,11 @@
 hr {
   animation: scaling 0.4s ease-in-out 0.35s 1;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
