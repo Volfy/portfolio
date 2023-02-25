@@ -19,7 +19,7 @@ class="m-0
       font-mono">
   
   <div id="container" 
-  class="m-4 sm:m-10 sm:text-lg">
+  class="relative h-full flex flex-col m-4 sm:m-10 sm:text-lg">
 
     <div id="top" 
     class="">
@@ -65,18 +65,19 @@ class="m-0
     </div>
 
     <div id="middle" 
-    class="flex flex-col justify-between gap-4 sm:gap-8">
+    class="flex flex-col justify-between gap-4 sm:gap-8 flex-1">
       <hr class="border-4 border-red-400 mt-4">
 
       <div id="projects"
-      class="flex flex-col justify-between gap-4 sm:gap-8">
+      class="flex flex-col lg:flex-row justify-between gap-4 sm:gap-8">
 
         <div id="project-1"
-        class="leading-none">
+        class="leading-none md:flex md:flex-row md:gap-8">
           
           <button onclick="moreInfo('project-1-details')">
             <img id="project-1-button" 
-            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
+            md:aspect-[4/3] md:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
@@ -92,11 +93,12 @@ class="m-0
         </div>
 
         <div id="project-2"
-        class="leading-none">
+        class="leading-none md:flex md:flex-row md:gap-8">
           
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
-            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
+            md:aspect-[4/3] md:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
           </button>
 
@@ -112,11 +114,12 @@ class="m-0
         </div>
 
         <div id="project-3"
-        class="leading-none">
+        class="leading-none md:flex md:flex-row md:gap-8">
           
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
-            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            class="blinker-fx hover:drop-shadow-xl md:hover:drop-shadow-2xl rounded-2xl md:rounded-3xl
+            md:aspect-[4/3] md:object-cover" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
           </button>
 
@@ -127,14 +130,20 @@ class="m-0
               <a href="">GitHub Repo</a>
               <a href="">Live Site</a>
             </div>
+          </div>
         </div>
+
+        <div id="unselected" class="hidden">
+
+        </div>
+
       </div>
 
-      <hr class="border-4 border-red-400 mb-2">
+      <hr class="border-4 border-red-400 mb-4 sm:mb-8">
     </div>
 
     <div id="footer"
-    class="">
+    class="w-full">
 
       <div id="footer-content"
       class="flex flex-col items-center">
@@ -179,8 +188,55 @@ class="m-0
 
   <script>
     const moreInfo = (id) => {
-      const stuff = document.getElementById(id)
-      stuff.classList.toggle('hidden')
+      if(screen.width < 1024) {
+        const details = document.getElementById(id)
+        details.classList.toggle('hidden')
+      } else {
+        const styles = ['md:aspect-[4/3]','md:object-cover']
+        const projectNumber = id.replace('-details', '')
+        const selected = document.getElementById(projectNumber)
+        const container = document.querySelector('#projects')
+        const newContainer = document.querySelector('#unselected')
+
+        if(selected.classList.contains('active-proj') || document.querySelector('.active-proj') !== null) {
+          const active = document.querySelector('.active-proj')
+          const details = document.querySelector('.active-proj > div')
+          details.classList.toggle('hidden')
+          active.classList.remove('active-proj')
+          styles.forEach(s => active.firstElementChild.firstElementChild.classList.toggle(s))
+          
+          newContainer.classList.add('hidden')
+          const otherProjects = Array.from(document.querySelectorAll('#unselected > div')).concat(active)
+                                .sort((a, b) => a.id.replace('project-', '') - b.id.replace('project-', ''))
+          otherProjects.forEach(p => {
+            container.appendChild(p)
+          })
+          container.appendChild(newContainer)
+
+          if (active.id === projectNumber) {
+            return
+          }
+        }
+
+        const otherProjects = Array.from(document.querySelectorAll('#projects > div'))
+                              .filter(p => p.id !== projectNumber && p.id !== 'unselected')
+                              .map(p => p.id)
+
+        selected.classList.add('active-proj')
+        styles.forEach(s => selected.firstElementChild.firstElementChild.classList.toggle(s))
+        newContainer.classList.remove('hidden')
+
+        otherProjects.forEach(p => {
+          const curr = document.getElementById(p)
+          newContainer.appendChild(curr)
+        })
+        
+        const details = document.getElementById(id)
+        details.classList.toggle('hidden')
+      }
+      
+
+      
     }
 
     let scrollToTop = document.getElementById('scroll-to-top')
