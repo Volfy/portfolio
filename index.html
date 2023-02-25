@@ -3,101 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>André Sammut Portfolio | Full Stack Web Developer</title>
+
   <link href="output.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon-light.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="img/favicon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="img/favicon-light.png" media="(prefers-color-scheme: no-preference)">
   
 </head>
-<body class="m-0 
-            w-screen h-screen 
-            flex flex-col items-center
-            text-base md:text-3xl lg:text-5xl">
-  <div class="flex flex-col justify-evenly items-center
-              w-11/12 h-screen">
+<body 
+class="m-0 
+      w-screen h-screen 
+      flex flex-col items-center
+      font-mono">
+  
+  <div id="container" 
+  class="m-4">
 
-    <div class="flex lg:flex-row flex-col flex-wrap items-center 
-                w-11/12
-                m-2 mt-10">
+    <div id="top" 
+    class="">
       
-      <div class="w-10/12">
-        <div>Hello World</div>
-        <div>> I'm Andre 'Sasha' Sammut</div>
-        <div>> I'm a Full Stack Web Developer</div>
-        <div>> I love to learn and Build</div>
+      <div id="bio" 
+      class="">
+        <div > 
+          <span aria-hidden="true">C:\></span> 
+          <span class="font-bold">hello world!</span>
+        </div>
+        <div>
+          <span aria-hidden="true">C:\></span> 
+          i'm 
+          <span class="font-bold">Andre 'Sasha' Sammut</span>
+        </div>
+        <div>
+          <span aria-hidden="true">C:\></span> 
+          i'm a 
+          <span class="font-bold">Full Stack Web Developer</span>
+          based in
+          <span class="font-bold">Malta</span>
+        </div>
+        <div> 
+          <span aria-hidden="true">C:\></span> 
+          i love to 
+          <span class="font-bold">Learn</span> 
+          and 
+          <span class="font-bold">Build</span>
+          things
+        </div>
+        <div aria-hidden="true">
+          C:\> <span id="blinker" class="hidden font-bold">_</span>
+        </div>
       </div>
-      <div class="w-2/12">
-        resume
+
+      <div id="resume"
+      class="blinker-fx m-4 flex flex-col items-center font-bold">
+        <a href="http://google.com">Resume</a>
       </div>
     
       
     </div>
 
-    <div class="flex flex-col justify-evenly items-center">
-      <hr class="m-10
-              border-4 border-red-400 
-              w-11/12">
-      <div class="flex lg:flex-row flex-col items-center justify-evenly">
-        
+    <div id="middle" 
+    class="flex flex-col justify-between gap-4">
+      <hr class="border-4 border-red-400 mt-4">
 
-        <div class="w-4/12">
-          <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
-                      src="img/gifs/sign-up-form.gif" alt="">
-        </div>
-        <div class="w-4/12">
-          <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
-                      src="img/gifs/sign-up-form.gif" alt="">
-        </div>
-        <div class="w-4/12">
-          <img class="w-11/12 
-                      aspect-[4/3] object-cover 
-                      m-auto 
-                      rounded-3xl" 
-                      src="img/gifs/sign-up-form.gif" alt="">
-        </div>
-      </div>
-      <hr class="m-10
-                border-4 border-red-400 
-                w-11/12">
-    </div>
-    
+      <div id="projects"
+      class="flex flex-col justify-between gap-4">
 
-    
+        <div id="project-1"
+        class="leading-none">
+          
+          <button onclick="moreInfo('project-1-details')">
+            <img id="project-1-button" 
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
+          </button>
 
-    <div class="text-base md:text-1xl lg:text-3xl
-                bottom-0
-                mb-10">
-
-      <div class="flex flex-col
-                  mx-auto 
-                  w-full">
-                  
-        <div class="flex flex-row items-center
-                    w-full">
-
-          <div>Get In Touch</div>
-
-          <div class="flex flex-row justify-between 
-                      w-3/12">
-            <img class="mr-2 
-                        h-10 
-                        shrink-0" src="img/github-mark.png" alt=""> 
-            <img class="h-10 
-                        shrink-0" src="img/LI-In-Bug.png" alt="">
+          <div id="project-1-details" 
+          class="hidden">
+            <div class="my-4 text-center font-bold">Twitter Clone</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
+            </div>
           </div>
         </div>
-        <div>Ennaila.@enail.com</div>
+
+        <div id="project-2"
+        class="leading-none">
+          
+          <button onclick="moreInfo('project-2-details')">
+            <img id="project-2-button"
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone 2">
+          </button>
+
+          <div id="project-2-details" 
+          class="hidden">
+            <div class="my-4 text-center font-bold">Twitter Clone 2</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="project-3"
+        class="leading-none">
+          
+          <button onclick="moreInfo('project-3-details')">
+            <img id="project-3-button" 
+            class="blinker-fx hover:drop-shadow-xl rounded-2xl" 
+            src="img/gifs/sign-up-form.gif" alt="Twitter Clone 3">
+          </button>
+
+          <div id="project-3-details" class="hidden" >
+            <div class="my-4 text-center font-bold">Twitter Clone 3</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            <div class="flex flex-row justify-around my-4">
+              <a href="">GitHub Repo</a>
+              <a href="">Live Site</a>
+            </div>
+        </div>
+      </div>
+
+      <hr class="border-4 border-red-400 mb-2">
+    </div>
+
+    <div id="footer"
+    class="">
+
+      <div id="footer-content"
+      class="flex flex-col items-center">
+                  
+        <div id="footer-content-top"
+        class="flex flex-row justify-between gap-4">
+
+          <div class="font-bold">Get In Touch:</div>
+
+          <div id="socials"
+          class="flex flex-row justify-between gap-4">
+            <a href="http://github.com"
+            class="">
+              <img src="img/github-mark.png" alt="" 
+              id="github"
+              class="blinker-fx h-6 w-6 shrink-0">
+            </a>  
+            <a href="http://linkedin.com"
+            class="">
+              <img src="img/linkedin.png" alt="" 
+              id="linkedin"
+              class="blinker-fx h-6 w-6 shrink-0" >
+            </a>
+          </div>
+        </div>
+        <div class="mb-4">
+          <a id="email"
+          class="blinker-fx"
+          href="mailto:andre.sammut98@gmail.com">
+            andre.sammut98@gmail.com
+          </a>
+        </div>
 
       </div>
 
     </div>
 
+
+    <button id="scroll-to-top" onclick="returnToTop()"
+    class="hidden fixed z-90 bottom-8 right-4 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
   </div>
+
+  <script>
+    const moreInfo = (id) => {
+      const stuff = document.getElementById(id)
+      stuff.classList.toggle('hidden')
+    }
+
+    let scrollToTop = document.getElementById('scroll-to-top')
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTop.classList.remove('hidden')
+      } else { scrollToTop.classList.add('hidden') }
+    }
+
+    const returnToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
+    const blinker = document.getElementById('blinker')
+    let intervalId = setInterval(() => blinker.classList.toggle('hidden'), 850)
+
+    const resetBlinker = () => {
+      blinker.textContent = '_'
+      clearInterval(intervalId)
+      intervalId = setInterval(() => blinker.classList.toggle('hidden'), 850)  
+    }
+    const changeBlinker = (title) => {
+      blinker.classList.remove('hidden')
+      clearInterval(intervalId)
+      blinker.textContent = title
+    }
+
+    const blinkerNames = {
+      'resume': 'Resume',
+      'project-1-button': 'Twitter Clone',
+      'project-2-button': 'Twitter Clone 2',
+      'project-3-button': 'Twitter Clone 3',
+      'github': 'GitHub',
+      'linkedin': 'LinkedIn',
+      'email': 'Email',
+    }
+
+    const blinkerItems = document.querySelectorAll('.blinker-fx')
+    blinkerItems.forEach(x => x.addEventListener('mouseover', () => changeBlinker(blinkerNames[x.id])))
+    blinkerItems.forEach(x => x.addEventListener('mouseleave', resetBlinker))
+    blinkerItems.forEach(x => x.addEventListener('mouseup', resetBlinker))
+
+  </script>
+
 </body>
 </html>
