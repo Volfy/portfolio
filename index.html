@@ -81,7 +81,7 @@ class="m-0
       class="flex flex-col xl:flex-row justify-between gap-4 sm:gap-8 lg:gap-12">
 
         <div id="project-1"
-        class="leading-none lg:flex lg:flex-row lg:gap-8 md:items-center">
+        class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8 md:items-center">
           
           <button onclick="moreInfo('project-1-details')" class="">
             <img id="project-1-button" 
@@ -102,7 +102,7 @@ class="m-0
         </div>
 
         <div id="project-2"
-        class="leading-none lg:flex lg:flex-row lg:gap-8">
+        class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-2-details')">
             <img id="project-2-button"
@@ -123,7 +123,7 @@ class="m-0
         </div>
 
         <div id="project-3"
-        class="leading-none lg:flex lg:flex-row lg:gap-8">
+        class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-3-details')">
             <img id="project-3-button" 
@@ -207,7 +207,7 @@ class="m-0
       
       isCoarse && selected.querySelector('button > img').classList.toggle('border-gray-800')
       
-      if(screen.width < 1024) {
+      if(screen.width < 1280) {
         details.classList.toggle('hidden')
       } else {
         const active = document.querySelector('.active-proj')
