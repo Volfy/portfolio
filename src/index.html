@@ -212,7 +212,10 @@ class="m-0
       const selected = document.getElementById(projectId)
       const container = document.getElementById('projects')
       
-      isCoarse && selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
+      if (isCoarse) {
+        selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
+        selected.querySelector('button > img').classList.toggle('border-indigo-300')
+      }
       
       if(screen.width < 1280) {
         details.classList.toggle('hidden')
