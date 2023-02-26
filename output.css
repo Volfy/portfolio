@@ -660,6 +660,10 @@ video {
   width: 100vw;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -718,6 +722,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .border-0 {
