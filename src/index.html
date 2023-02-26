@@ -16,7 +16,7 @@
 class="m-0 
       w-screen h-screen 
       flex flex-col items-center
-      font-mono">
+      font-mono bg-violet-50">
   
   <div id="container" 
   class="relative h-full flex flex-col m-4 sm:m-10 sm:text-lg md:text-xl lg:text-2xl 
@@ -27,24 +27,24 @@ class="m-0
       <div id="bio" 
       class="">
         <div class="text-lg sm:text-xl md:text-2xl 2xl:text-3xl"> 
-          <span aria-hidden="true" class="text-xs sm:text-base">C:\></span> 
+          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
           <span class="font-bold">hello world!</span>
         </div>
         <br>
         <div>
-          <span aria-hidden="true" class="text-xs sm:text-base">C:\></span> 
+          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
           i'm 
           <span class="font-bold">Andre 'Sasha' Sammut</span>
         </div>
         <div>
-          <span aria-hidden="true" class="text-xs sm:text-base">C:\></span> 
+          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
           i'm a 
           <span class="font-bold">Full Stack Developer</span>
           based in
           <span class="font-bold">Malta</span>
         </div>
         <div> 
-          <span aria-hidden="true" class="text-xs sm:text-base">C:\></span> 
+          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
           i love to 
           <span class="font-bold">Learn</span> 
           and 
@@ -53,7 +53,7 @@ class="m-0
         </div>
         <br>
         <div aria-hidden="true" >
-          <span class="text-xs sm:text-base">C:\></span> 
+          <span class="pre text-xs sm:text-base">C:\></span> 
           <span id="blinker" class="opacity-100 font-bold transition-all duration-700">_</span>
         </div>
       </div>
@@ -62,8 +62,10 @@ class="m-0
       class="blinker-fx m-4 flex flex-col items-center font-bold lg:mr-20">
         
         <button type="button"
-        class="flex items-center border-gray-600 border-2 md:border-4 rounded-lg px-4 py-2 
-        focus:outline-none focus:border-blue-900 hover:bg-gray-600 hover:border-gray-100 hover:text-gray-100">
+        class="flex items-center border-indigo-300 text-indigo-500 border-2 md:border-4 rounded-lg px-4 py-2 
+        focus:outline-none focus:border-indigo-900 
+        hover:bg-fuchsia-900 hover:border-violet-50 hover:text-gray-100 
+        transition-all duration-500">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
@@ -76,7 +78,7 @@ class="m-0
 
     <div id="middle" 
     class="flex flex-col justify-between flex-1 gap-4 sm:gap-8 lg:gap-12 items-center">
-      <hr class="border-2 border-red-400 mt-4 lg:mt-24 rounded-lg w-11/12">
+      <hr class="border-2 border-fuchsia-900 mt-4 lg:mt-24 rounded-lg w-11/12">
 
       <div id="projects"
       class="flex flex-col xl:flex-row justify-between gap-4 sm:gap-8 lg:gap-12">
@@ -86,8 +88,8 @@ class="m-0
           
           <button onclick="moreInfo('project-1-details')" class="focus:outline-none">
             <img id="project-1-button" 
-            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-600" 
+            class="blinker-fx  border-8 border-indigo-300 rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover transition-all duration-700" 
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
@@ -96,8 +98,8 @@ class="m-0
             <div class="text-center font-bold my-4 sm:my-8">Twitter Clone</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
-              <a href="">GitHub Repo</a>
-              <a href="">Live Site</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
           </div>
         </div>
@@ -107,8 +109,8 @@ class="m-0
           
           <button onclick="moreInfo('project-2-details')" class="focus:outline-none">
             <img id="project-2-button"
-            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-600" 
+            class="blinker-fx  border-8 border-indigo-300 rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover transition-all duration-700" 
             src="img/gifs/library.gif" alt="Twitter Clone 2">
           </button>
 
@@ -117,8 +119,8 @@ class="m-0
             <div class="text-center font-bold my-4 sm:my-8">Twitter Clone 2</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
-              <a href="">GitHub Repo</a>
-              <a href="">Live Site</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
           </div>
         </div>
@@ -128,8 +130,8 @@ class="m-0
           
           <button onclick="moreInfo('project-3-details')" class="focus:outline-none">
             <img id="project-3-button" 
-            class="blinker-fx  border-4 rounded-2xl md:rounded-3xl
-            xl:aspect-[4/3] xl:object-cover transition-all duration-600
+            class="blinker-fx  border-8 border-indigo-300  rounded-2xl md:rounded-3xl
+            xl:aspect-[4/3] xl:object-cover transition-all duration-700
             focus:outline-none focus:ring" 
             src="img/gifs/restaurant.gif" alt="Twitter Clone 3">
           </button>
@@ -138,15 +140,15 @@ class="m-0
             <div class="text-center font-bold my-4 sm:my-8">Twitter Clone 3</div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
-              <a href="">GitHub Repo</a>
-              <a href="">Live Site</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
+              <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
           </div>
         </div>
 
       </div>
 
-      <hr class="border-2 border-red-400 mb-4 sm:mb-8 lg:mb-24 rounded-lg w-11/12">
+      <hr class="border-2 border-fuchsia-900 mb-4 sm:mb-8 lg:mb-24 rounded-lg w-11/12">
     </div>
 
     <div id="footer"
@@ -178,7 +180,7 @@ class="m-0
         </div>
         <div class="mb-4 mt-2 sm:mb-8">
           <a id="email"
-          class="blinker-fx"
+          class="blinker-fx hover:text-fuchsia-800 text-indigo-500 transition-all duration-500"
           href="mailto:andre.sammut98@gmail.com">
             andre.sammut98@gmail.com
           </a>
@@ -190,14 +192,16 @@ class="m-0
 
 
     <button id="scroll-to-top" onclick="returnToTop()"
-    class="hidden focus:outline-none focus:ring fixed z-90 bottom-8 right-4 border-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+    class="hidden focus:outline-none fixed z-90 
+    bottom-8 right-4 border-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-md 
+    bg-fuchsia-900 text-white text-3xl font-bold">&uarr;</button>
   </div>
 
   <script>
     let isCoarse = true
     if(window.matchMedia('(pointer: fine)').matches) {
       document.querySelectorAll('#projects > div > button > img').forEach(b => {
-        b.classList.add('hover:border-gray-800', 'md:hover:border-gray-800')
+        b.classList.add('hover:border-fuchsia-900')
       })
       isCoarse = false
     }
@@ -207,7 +211,7 @@ class="m-0
       const selected = document.getElementById(projectId)
       const container = document.getElementById('projects')
       
-      isCoarse && selected.querySelector('button > img').classList.toggle('border-gray-800')
+      isCoarse && selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
       
       if(screen.width < 1280) {
         details.classList.toggle('hidden')
