@@ -608,6 +608,14 @@ video {
   margin-top: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -700,6 +708,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -770,6 +782,10 @@ video {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -810,6 +826,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-green-900 {
+  --tw-text-opacity: 1;
+  color: rgb(20 83 45 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -879,11 +900,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.pre {
-  color: #14532d;
-  font-weight: bold;
-}
-
 .hover\:border-fuchsia-900:hover {
   --tw-border-opacity: 1;
   border-color: rgb(112 26 117 / var(--tw-border-opacity));
@@ -939,6 +955,14 @@ a {
     margin-bottom: 2rem;
   }
 
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .sm\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .sm\:h-10 {
     height: 2.5rem;
   }
@@ -976,10 +1000,6 @@ a {
 }
 
 @media (min-width: 768px) {
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:rounded-3xl {
     border-radius: 1.5rem;
   }
@@ -1019,6 +1039,14 @@ a {
 
   .lg\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mt-12 {
+    margin-top: 3rem;
   }
 
   .lg\:flex {
@@ -1090,3 +1118,4 @@ a {
     line-height: 2.25rem;
   }
 }
+

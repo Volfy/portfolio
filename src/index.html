@@ -22,46 +22,38 @@ class="m-0
   class="relative h-full flex flex-col m-4 sm:m-10 sm:text-lg md:text-xl lg:text-2xl 
   2xl:text-3xl 2xl:max-w-[1800px]">
 
-    <div id="top" 
+    <header 
     class="lg:flex lg:flex-row lg:justify-between lg:items-center lg:mt-8">
-      <div id="bio" 
+      <section id="bio" 
       class="">
         <div class="text-lg sm:text-xl md:text-2xl 2xl:text-3xl"> 
-          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
+          <span aria-hidden="true" class="text-green-900 font-bold text-xs sm:text-base">C:\&#62;</span> 
           <span class="font-bold">hello world!</span>
         </div>
         <br>
-        <div>
-          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
-          i'm 
-          <span class="font-bold">Andre 'Sasha' Sammut</span>
-        </div>
-        <div>
-          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
-          i'm a 
-          <span class="font-bold">Full Stack Developer</span>
-          based in
-          <span class="font-bold">Malta</span>
-        </div>
-        <div> 
-          <span aria-hidden="true" class="pre text-xs sm:text-base">C:\></span> 
-          i love to 
-          <span class="font-bold">Learn</span> 
-          and 
-          <span class="font-bold">Build</span>
-          things
-        </div>
+        <h1>
+          <span aria-hidden="true" class="text-green-900 font-bold text-xs sm:text-base">C:\&#62;</span> 
+          i'm <span class="font-bold">Andre 'Sasha' Sammut</span>
+        </h1>
+        <h2>
+          <span aria-hidden="true" class="text-green-900 font-bold text-xs sm:text-base">C:\&#62;</span> 
+          i'm a <span class="font-bold">Full Stack Developer</span> based in <span class="font-bold">Malta</span>
+        </h2>
+        <h3> 
+          <span aria-hidden="true" class="text-green-900 font-bold text-xs sm:text-base">C:\&#62;</span> 
+          i love to <span class="font-bold">Learn</span> and <span class="font-bold">Build</span> things
+        </h3>
         <br>
         <div aria-hidden="true" >
-          <span class="pre text-xs sm:text-base">C:\></span> 
+          <span class="text-green-900 font-bold text-xs sm:text-base">C:\&#62;</span> 
           <span id="blinker" class="opacity-100 font-bold transition-all duration-700">_</span>
         </div>
-      </div>
+      </section>
 
       <div id="resume"
       class="blinker-fx m-4 flex flex-col items-center font-bold lg:mr-20">
         
-        <button type="button"
+        <a href=""
         class="flex items-center border-indigo-300 text-indigo-500 border-2 md:border-4 rounded-lg px-4 py-2 
         focus:outline-none focus:border-indigo-900 
         hover:bg-fuchsia-900 hover:border-violet-50 hover:text-gray-100 
@@ -70,22 +62,23 @@ class="m-0
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
           <span class="ml-2">Resume</span>
-        </button>
+        </a>
       </div>
     
       
-    </div>
+    </header>
 
-    <div id="middle" 
+    <main 
     class="flex flex-col justify-between flex-1 gap-4 sm:gap-8 lg:gap-12 items-center">
-      <hr class="border-2 border-fuchsia-900 mt-4 lg:mt-24 rounded-lg w-11/12">
+      
+      <hr class="border-2 border-fuchsia-900 mt-4 lg:mt-12 rounded-lg w-11/12">
 
-      <div id="projects"
+      <section id="projects"
       class="flex flex-col xl:flex-row justify-between gap-4 sm:gap-8 lg:gap-12
       sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
 
-        <div id="project-1"
-        class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8 md:items-center">
+        <article id="project-1"
+        class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-1-details')" class="focus:outline-none">
             <img id="project-1-button" 
@@ -94,18 +87,20 @@ class="m-0
             src="img/gifs/sign-up-form.gif" alt="Twitter Clone">
           </button>
 
-          <div id="project-1-details" 
-          class="hidden">
-            <div class="text-center font-bold my-4 sm:my-8">Twitter Clone</div>
+          <details id="project-1-details" 
+          class="hidden" open>
+            <summary class="text-center font-bold my-4 sm:my-8">
+              <h2 class="inline">Twitter Clone</h2>
+            </summary>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
-          </div>
-        </div>
+          </details>
+        </article>
 
-        <div id="project-2"
+        <article id="project-2"
         class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-2-details')" class="focus:outline-none">
@@ -115,18 +110,20 @@ class="m-0
             src="img/gifs/library.gif" alt="Twitter Clone 2">
           </button>
 
-          <div id="project-2-details" 
-          class="hidden">
-            <div class="text-center font-bold my-4 sm:my-8">Twitter Clone 2</div>
+          <details id="project-2-details" 
+          class="hidden" open>
+            <summary class="text-center font-bold my-4 sm:my-8">
+              <h2 class="inline">Twitter Clone 2</h2>
+            </summary>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
-          </div>
-        </div>
+          </details>
+        </article>
 
-        <div id="project-3"
+        <article id="project-3"
         class="leading-none lg:flex lg:flex-col xl:flex-row lg:gap-8">
           
           <button onclick="moreInfo('project-3-details')" class="focus:outline-none">
@@ -137,34 +134,41 @@ class="m-0
             src="img/gifs/restaurant.gif" alt="Twitter Clone 3">
           </button>
 
-          <div id="project-3-details" class="hidden" >
-            <div class="text-center font-bold my-4 sm:my-8">Twitter Clone 3</div>
+          <details id="project-3-details" 
+          class="hidden" open>
+            <summary class="text-center font-bold my-4 sm:my-8">
+              <h2 class="inline">Twitter Clone 3</h2>
+            </summary>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             <div class="flex flex-row justify-around my-4 sm:my-8">
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">GitHub Repo</a>
               <a href="" class="text-indigo-500 hover:text-fuchsia-800 transition-all duration-500">Live Site</a>
             </div>
-          </div>
-        </div>
+          </details>
+        </article>
 
-      </div>
+      </section>
 
-      <hr class="border-2 border-fuchsia-900 mb-4 sm:mb-8 lg:mb-24 rounded-lg w-11/12">
-    </div>
+      <hr class="border-2 border-fuchsia-900 mb-2 sm:mb-6 lg:mb-12 rounded-lg w-11/12">
+    </main>
 
-    <div id="footer"
+    <footer
     class="w-full">
 
-      <div id="footer-content"
+      <section id="footer-content"
       class="flex flex-col items-center">
-                  
-        <div id="footer-content-top"
-        class="flex flex-row justify-between items-center gap-4 sm:gap-8">
 
-          <div class="font-bold">Get In Touch:</div>
+          <h3 class="font-bold">Get In Touch</h3>
+
+          <a id="email"
+          class="blinker-fx hover:text-fuchsia-800 text-indigo-500 transition-all duration-500
+          mt-2 mb-4"
+          href="mailto:andre.sammut98@gmail.com">
+            andre.sammut98@gmail.com
+          </a>
 
           <div id="socials"
-          class="flex flex-row justify-between gap-4">
+          class="flex flex-row justify-between gap-4 mb-4 sm:mb-8">
             <a href="https://github.com/Volfy"
             class="">
               <img src="img/github-mark.png" alt="GitHub" 
@@ -178,18 +182,12 @@ class="m-0
               class="blinker-fx shrink-0 h-8 w-8 sm:h-10 sm:w-10" >
             </a>
           </div>
-        </div>
-        <div class="mb-4 mt-2 sm:mb-8">
-          <a id="email"
-          class="blinker-fx hover:text-fuchsia-800 text-indigo-500 transition-all duration-500"
-          href="mailto:andre.sammut98@gmail.com">
-            andre.sammut98@gmail.com
-          </a>
-        </div>
+          
+        
 
-      </div>
+      </section>
 
-    </div>
+    </footer>
 
 
     <button id="scroll-to-top" onclick="returnToTop()"
@@ -201,7 +199,7 @@ class="m-0
   <script>
     let isCoarse = true
     if(window.matchMedia('(pointer: fine)').matches) {
-      document.querySelectorAll('#projects > div > button > img').forEach(b => {
+      document.querySelectorAll('#projects > article > button > img').forEach(b => {
         b.classList.add('hover:border-fuchsia-900')
       })
       isCoarse = false
@@ -217,11 +215,11 @@ class="m-0
         selected.querySelector('button > img').classList.toggle('border-indigo-300')
       }
       
-      if(screen.width < 1280) {
+      if(window.screen.width < 1280) {
         details.classList.toggle('hidden')
       } else {
         const active = document.querySelector('.active-proj')
-        const otherProjects = Array.from(document.querySelectorAll('#projects > div'))
+        const otherProjectIds = Array.from(document.querySelectorAll('#projects > article'))
                               .map(p => p.id)
                               .filter(p => p !== projectId)
 
@@ -235,10 +233,10 @@ class="m-0
             p.classList.add('xl:aspect-[4/3]', 'xl:object-cover')
           })
         
-          details.classList.add('hidden')
+          details.classList.toggle('hidden')
           details.classList.remove('flex-1')
 
-          otherProjects.forEach(p => {
+          otherProjectIds.forEach(p => {
             const curr = document.getElementById(p)
             curr.classList.remove('col-start-10', 'col-span-3')
           })
@@ -246,7 +244,7 @@ class="m-0
           return 
         }
         if (active) {
-          moreInfo(active.id)
+          moreInfo(`${active.id}-details`)
           moreInfo(id)
         }
         
@@ -263,10 +261,10 @@ class="m-0
         details.classList.remove('hidden')
         details.classList.add('flex-1')
 
-        otherProjects.forEach(p => {
+        otherProjectIds.forEach(p => {
           const curr = document.getElementById(p)
           curr.classList.add('col-start-10', 'col-span-3')
-          curr.querySelector('div').classList.add('hidden')
+          curr.querySelector('details').classList.add('hidden')
         })
       }
     }
