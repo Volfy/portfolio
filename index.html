@@ -198,7 +198,7 @@ class="m-0
 
   <script>
     // hover fx
-    var isCoarse = true
+    let isCoarse = true
     if(window.matchMedia('(pointer: fine)').matches) {
       document.querySelectorAll('#projects > article > button > img').forEach(b => {
         b.classList.add('hover:border-fuchsia-900')
@@ -208,7 +208,7 @@ class="m-0
 
     // open/close details
 
-    var moreInfo
+    let moreInfo
     const initialize = (already) => {
       if(window.innerWidth < 1280) {
         if(already) {
@@ -310,7 +310,7 @@ class="m-0
     }
 
     initialize(true)
-    var calls = 0;
+    let calls = 0;
 
     // when window small 
 
