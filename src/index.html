@@ -220,6 +220,7 @@ class="m-0
         moreInfo = (id) => {
           const details = document.getElementById(id)
           const projectId = id.replace('-details', '')
+          const selected = document.getElementById(projectId)
 
           if (isCoarse) {
             // No hover possible 
