@@ -684,6 +684,10 @@ video {
   flex-shrink: 0;
 }
 
+.resize {
+  resize: both;
+}
+
 .grid-flow-row-dense {
   grid-auto-flow: row dense;
 }

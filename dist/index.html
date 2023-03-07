@@ -197,6 +197,7 @@ class="m-0
   </div>
 
   <script>
+    // hover fx
     let isCoarse = true
     if(window.matchMedia('(pointer: fine)').matches) {
       document.querySelectorAll('#projects > article > button > img').forEach(b => {
@@ -204,72 +205,128 @@ class="m-0
       })
       isCoarse = false
     }
-    const moreInfo = (id) => {
-      const details = document.getElementById(id)
-      const projectId = id.replace('-details', '')
-      const selected = document.getElementById(projectId)
-      const container = document.getElementById('projects')
-      
-      if (isCoarse) {
-        selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
-        selected.querySelector('button > img').classList.toggle('border-indigo-300')
-      }
-      
-      if(window.innerWidth < 1280) {
-        details.classList.toggle('hidden')
-      } else {
-        const active = document.querySelector('.active-proj')
-        const otherProjectIds = Array.from(document.querySelectorAll('#projects > article'))
-                              .map(p => p.id)
-                              .filter(p => p !== projectId)
 
-        if (active && selected.id === active.id) {
-          container.classList.add('flex', 'flex-col', 'xl:flex-row', 'justify-between')
-          container.classList.remove('grid', 'grid-cols-12', 'grid-rows-2', 'grid-flow-row-dense')
-        
-          selected.classList.remove('active-proj', 'row-span-2', 'col-span-9', 'items-center')
-          selected.querySelector('button').classList.remove('flex-[2_1_0%]')
-          document.querySelectorAll('button > img').forEach(p => {
-            p.classList.add('xl:aspect-[4/3]', 'xl:object-cover')
+    // open/close details
+
+    let moreInfo
+    const initialize = (already) => {
+      if(window.innerWidth < 1280) {
+        if(already) {
+          const detailPages = document.querySelectorAll('details')
+          detailPages.forEach(e => e.classList.remove('hidden'))
+          detailPages.forEach(e => e.removeAttribute('open'))
+        }
+
+        moreInfo = (id) => {
+          const details = document.getElementById(id)
+          const projectId = id.replace('-details', '')
+
+          if (isCoarse) {
+            // No hover possible 
+            selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
+            selected.querySelector('button > img').classList.toggle('border-indigo-300')
+          }
+
+          details.hasAttribute('open') ? details.removeAttribute('open') : details.setAttribute('open', true)
+        }
+
+      } else {
+        if(!already) {
+          const detailPages = document.querySelectorAll('details')
+          detailPages.forEach(e => {
+            e.classList.remove('hidden')
+            e.classList.add('hidden')
           })
-        
-          details.classList.toggle('hidden')
-          details.classList.remove('flex-1')
+          detailPages.forEach(e => e.setAttribute('open', true))
+        }
+
+        moreInfo = (id) => {
+          const details = document.getElementById(id)
+          const projectId = id.replace('-details', '')
+          const selected = document.getElementById(projectId)
+          const container = document.getElementById('projects')
+
+          const flexy = ['flex', 'flex-col', 'xl:flex-row', 'justify-between']
+          const gridy = ['grid', 'grid-cols-12', 'grid-rows-2', 'grid-flow-row-dense']
+          
+          if (isCoarse) {
+            // No hover possible 
+            selected.querySelector('button > img').classList.toggle('border-fuchsia-900')
+            selected.querySelector('button > img').classList.toggle('border-indigo-300')
+          }
+          
+          const active = document.querySelector('.active-proj')
+          const otherProjectIds = Array.from(document.querySelectorAll('#projects > article'))
+                                .map(p => p.id)
+                                .filter(p => p !== projectId)
+
+          if (active && selected.id === active.id) {
+            container.classList.add(...flexy)
+            container.classList.remove(...gridy)
+          
+            selected.classList.remove('active-proj', 'row-span-2', 'col-span-9', 'items-center')
+            selected.querySelector('button').classList.remove('flex-[2_1_0%]')
+            
+            document.querySelectorAll('button > img').forEach(p => {
+              p.classList.add('xl:aspect-[4/3]', 'xl:object-cover')
+            })
+          
+            details.classList.toggle('hidden')
+            details.classList.remove('flex-1')
+
+            otherProjectIds.forEach(p => {
+              const curr = document.getElementById(p)
+              curr.classList.remove('col-start-10', 'col-span-3')
+            })
+
+            return 
+          }
+          if (active) {
+            moreInfo(`${active.id}-details`)
+            moreInfo(id)
+          }
+          
+          container.classList.remove(...flexy)
+          container.classList.add(...gridy)
+          
+          selected.classList.add('active-proj', 'row-span-2', 'col-span-9', 'items-center')
+          selected.classList.remove('col-start-10', 'col-span-3')
+          selected.querySelector('button').classList.add('flex-[2_1_0%]')
+          
+          document.querySelectorAll('button > img').forEach(p => {
+            p.classList.remove('xl:aspect-[4/3]', 'xl:object-cover')
+          })
+          
+          details.classList.remove('hidden')
+          details.classList.add('flex-1')
 
           otherProjectIds.forEach(p => {
             const curr = document.getElementById(p)
-            curr.classList.remove('col-start-10', 'col-span-3')
+            curr.classList.add('col-start-10', 'col-span-3')
+            curr.querySelector('details').classList.add('hidden')
           })
-
-          return 
         }
-        if (active) {
-          moreInfo(`${active.id}-details`)
-          moreInfo(id)
-        }
-        
-        container.classList.remove('flex', 'flex-col', 'xl:flex-row', 'justify-between')
-        container.classList.add('grid', 'grid-cols-12', 'grid-rows-2', 'grid-flow-row-dense')
-        
-        selected.classList.add('active-proj', 'row-span-2', 'col-span-9', 'items-center')
-        selected.classList.remove('col-start-10', 'col-span-3')
-        selected.querySelector('button').classList.add('flex-[2_1_0%]')
-        document.querySelectorAll('button > img').forEach(p => {
-          p.classList.remove('xl:aspect-[4/3]', 'xl:object-cover')
-        })
-        
-        details.classList.remove('hidden')
-        details.classList.add('flex-1')
-
-        otherProjectIds.forEach(p => {
-          const curr = document.getElementById(p)
-          curr.classList.add('col-start-10', 'col-span-3')
-          curr.querySelector('details').classList.add('hidden')
-        })
       }
     }
+
+    initialize(true)
+    let calls = 0;
+
+    // when window small 
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth < 1280){
+        const active = document.querySelector('.active-proj')
+        if(active) {moreInfo(`${active.id}-details`)}
+        calls ? initialize(true) : initialize(false)
+        calls = 0
+        return
+      }
+      calls ? initialize(true) : initialize(false)
+      calls = 1
+    })
     
-    // scroll top button
+    // scroll to top button
 
     let scrollToTop = document.getElementById('scroll-to-top')
 
